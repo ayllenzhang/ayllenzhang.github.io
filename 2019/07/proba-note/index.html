@@ -1,0 +1,1104 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+
+    
+
+    
+
+
+
+    <meta charset="utf-8">
+    
+    
+    
+    <link rel="canonical" href="true/2019/07/proba-note/">
+    
+    
+    <title>Probability statistics notes | Ayllen&#39;s Neverland</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <meta name="theme-color" content="#3F51B5">
+    
+    
+    <meta name="keywords" content="Math,Probablistic,Note">
+    <meta name="description" content="Some notes I took down last summer, when I was reviewing statistics and probability.">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Probability statistics notes">
+<meta property="og:url" content="https://ayllenzhang.github.io/2019/07/proba-note/index.html">
+<meta property="og:site_name" content="Ayllen&#39;s Neverland">
+<meta property="og:description" content="Some notes I took down last summer, when I was reviewing statistics and probability.">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2019-07-24T11:31:19.000Z">
+<meta property="article:modified_time" content="2020-11-17T01:08:35.000Z">
+<meta property="article:author" content="Ayllen Zhang">
+<meta property="article:tag" content="Math">
+<meta property="article:tag" content="Probablistic">
+<meta property="article:tag" content="Note">
+<meta name="twitter:card" content="summary">
+    
+        <link rel="alternate" type="application/atom+xml" title="Ayllen&#39;s Neverland" href="/atom.xml">
+    
+    <link rel="shortcut icon" href="/img/halfmoon.png">
+    <link rel="stylesheet" href="/css/style.css?v=1.7.2">
+    <link rel="stylesheet" href="/css/prism/prism-tomorrow-night.css?v=1.7.2">
+    <script>window.lazyScripts=[]</script>
+
+    <!-- custom head -->
+    
+
+<!-- hexo injector head_end start -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css">
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hexo-math@4.0.0/dist/style.css">
+<!-- hexo injector head_end end --><meta name="generator" content="Hexo 5.4.0"></head>
+
+<body>
+    <div id="loading" class="active"></div>
+
+    <aside id="menu" class="hide" >
+  <div class="inner flex-row-vertical">
+    <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-off">
+        <i class="icon icon-lg icon-list-ul"></i>
+    </a>
+    <div class="brand-wrap" style="background-image:url(/img/yapam.jpeg)">
+      <div class="brand">
+        <a href="/about" class="avatar waves-effect waves-circle waves-light">
+          <img src="/img/mokuroo.png">
+        </a>
+        <hgroup class="introduce">
+          <h5 class="nickname">Ayllen Zhang</h5>
+          <a href="mailto:ayllenzhang@gmail.com" title="ayllenzhang@gmail.com" class="mail">ayllenzhang@gmail.com</a>
+        </hgroup>
+      </div>
+    </div>
+    <div class="scroll-wrap flex-col">
+      <ul class="nav">
+        
+            <li class="waves-block waves-effect">
+              <a href="/"  >
+                <i class="icon icon-lg icon-home"></i>
+                Home
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/archives"  >
+                <i class="icon icon-lg icon-archives"></i>
+                Archives
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/tags"  >
+                <i class="icon icon-lg icon-tags"></i>
+                Tags
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/categories"  >
+                <i class="icon icon-lg icon-th-list"></i>
+                Categories
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="https://github.com/ayllenzhang" target="_blank" >
+                <i class="icon icon-lg icon-github"></i>
+                Github
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="http://www.weibo.com/u/1934790632" target="_blank" >
+                <i class="icon icon-lg icon-weibo"></i>
+                Weibo
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a target="_blank" rel="noopener" href="http://roosephu.github.io"  >
+                <i class="icon icon-lg icon-link"></i>
+                AFAIK (Roosephu)
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a target="_blank" rel="noopener" href="http://jiaqiguan.net"  >
+                <i class="icon icon-lg icon-link2"></i>
+                Jiaqi&#39;s Homepage
+              </a>
+            </li>
+        
+      </ul>
+    </div>
+  </div>
+</aside>
+
+    <main id="main">
+        <header class="top-header" id="header">
+    <div class="flex-row">
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
+          <i class="icon icon-lg icon-navicon"></i>
+        </a>
+        <div class="flex-col header-title ellipsis">Probability statistics notes</div>
+        
+        <div class="search-wrap" id="search-wrap">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
+                <i class="icon icon-lg icon-chevron-left"></i>
+            </a>
+            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="输入感兴趣的关键字">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="search">
+                <i class="icon icon-lg icon-search"></i>
+            </a>
+        </div>
+        
+        
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menuShare">
+            <i class="icon icon-lg icon-share-alt"></i>
+        </a>
+        
+    </div>
+</header>
+<header class="content-header post-header">
+
+    <div class="container fade-scale">
+        <h1 class="title">Probability statistics notes</h1>
+        <h5 class="subtitle">
+            
+                <time datetime="2019-07-24T11:31:19.000Z" itemprop="datePublished" class="page-time">
+  7月 24, 2019
+</time>
+
+
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/Research/">科研 / Research</a></li></ul>
+
+            
+        </h5>
+    </div>
+
+    
+
+
+</header>
+
+
+<div class="container body-wrap">
+    
+    <aside class="post-widget">
+        <nav class="post-toc-wrap post-toc-shrink" id="post-toc">
+            <h4>TOC</h4>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#basic-probability"><span class="post-toc-text">Basic Probability</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#definitions"><span class="post-toc-text">Definitions</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#bayes-theorem"><span class="post-toc-text">Bayes&#39; Theorem</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#independent-events"><span class="post-toc-text">Independent events</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#pmf-cdf-and-pdf"><span class="post-toc-text">PMF, CDF and PDF</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#expectation-and-variance"><span class="post-toc-text">Expectation and variance</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#expectation"><span class="post-toc-text">Expectation</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#variance"><span class="post-toc-text">Variance</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#covariance"><span class="post-toc-text">Covariance</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#correlation"><span class="post-toc-text">Correlation</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#sample-expectation-and-variance"><span class="post-toc-text">Sample expectation and variance</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#moment-generating-function"><span class="post-toc-text">Moment Generating Function</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#typical-discrete-distributions"><span class="post-toc-text">Typical discrete distributions</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#binomial-distributions"><span class="post-toc-text">Binomial Distributions</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#poisson-distributions"><span class="post-toc-text">Poisson Distributions</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#typical-continuous-distributions"><span class="post-toc-text">Typical continuous distributions</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#uniform-distributions"><span class="post-toc-text">Uniform Distributions</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#exponential-distribution"><span class="post-toc-text">Exponential Distribution</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#gamma-distribution"><span class="post-toc-text">Gamma Distribution</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#derivation-of-gamma-distribution"><span class="post-toc-text">Derivation of Gamma Distribution</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#the-gamma-function"><span class="post-toc-text">The Gamma Function</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#chi-square-distribution"><span class="post-toc-text">Chi-square Distribution</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#an-interesting-story-of-betadirichlet-distribution"><span class="post-toc-text">An interesting story of Beta&#x2F;Dirichlet distribution</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#normal-distribution-or-gaussian-distribution"><span class="post-toc-text">Normal Distribution (or Gaussian Distribution)</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#z-scores"><span class="post-toc-text">Z Scores</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#relationship-of-normal-distribution-and-chi2-distribution"><span class="post-toc-text">Relationship of Normal Distribution and \(\chi^2\) Distribution</span></a></li></ol></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#central-limit-theorem"><span class="post-toc-text">Central limit theorem</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#definition"><span class="post-toc-text">Definition</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#statistical-hypothesis-test"><span class="post-toc-text">Statistical Hypothesis Test</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#about-null-hypothesis"><span class="post-toc-text">About Null Hypothesis</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#students-t-test"><span class="post-toc-text">Student&#39;s t-Test</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#one-sample-t-test"><span class="post-toc-text">One-sample t-test</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#two-sample-t-test"><span class="post-toc-text">Two-sample t-test</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#z-test"><span class="post-toc-text">Z-Test</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#relationship-with-students-t-test"><span class="post-toc-text">Relationship with Student&#39;s t-Test</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#pearsons-chi-squared-test"><span class="post-toc-text">Pearson&#39;s chi-squared test</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#testing-for-statistical-independence"><span class="post-toc-text">Testing for statistical independence</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#yates-correction-for-continuity"><span class="post-toc-text">Yates&#39; Correction for Continuity</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#anova"><span class="post-toc-text">ANOVA</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#one-way-anova"><span class="post-toc-text">One-way ANOVA</span></a></li></ol></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#basic-knowledge-in-calculus"><span class="post-toc-text">Basic knowledge in calculus</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#integration-by-substitution"><span class="post-toc-text">Integration by substitution</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#integration-by-parts"><span class="post-toc-text">Integration by parts</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#kroneckers-delta"><span class="post-toc-text">Kronecker&#39;s delta</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#intergrability-of-xne-x22"><span class="post-toc-text">Intergrability of \(x^ne^{-x^2&#x2F;2}\)</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#hermite-polynomial"><span class="post-toc-text">Hermite Polynomial</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#calculation-of-int_-inftyinfty-e-x2dx"><span class="post-toc-text">Calculation of \(\int_{-\infty}^{\infty} e^{-x^2}dx\)</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#calculation-of-int_-inftyinftyx2ke-x2dx"><span class="post-toc-text">Calculation of \(\int_{-\infty}^{\infty}{x^{2k}e^{-x^2}dx}\)</span></a></li></ol></li></ol>
+        </nav>
+    </aside>
+
+
+<article id="post-proba-note"
+  class="post-article article-type-post fade" itemprop="blogPost">
+
+    <div class="post-card">
+        <h1 class="post-card-title">Probability statistics notes</h1>
+        <div class="post-meta">
+            <time class="post-time" title="7月 24, 2019 19:31" datetime="2019-07-24T11:31:19.000Z"  itemprop="datePublished">7月 24, 2019</time>
+
+            
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/Research/">科研 / Research</a></li></ul>
+
+
+
+            
+
+            
+        </div>
+        <div class="post-content" id="post-content" itemprop="postContent">
+            <p>Some notes I took down last summer, when I was reviewing <em>statistics</em> and <em>probability</em>.</p>
+<p><escape><span id="more"></span></escape></p>
+<h2 id="basic-probability">Basic Probability</h2>
+<h3 id="definitions">Definitions</h3>
+<ul>
+<li>Event: A set of outcomes of an experiment</li>
+<li>Random variable: outcome of an experiment</li>
+</ul>
+<h3 id="bayes-theorem">Bayes' Theorem</h3>
+<p>For two random events A, B <span class="math display">\[
+P(B|A)=\frac{P(AB)}{P(A)}=\frac{P(AB)}{P(B)}\cdot\frac{P(B)}{P(A)}=\frac{P(B)}{P(A)}\cdot P(A|B)
+\]</span> namely, <span class="math display">\[
+P(B|A)P(A)=P(AB)=P(A|B)P(B)
+\]</span></p>
+<h3 id="independent-events">Independent events</h3>
+<p>Events A and B are independent events if the occurrence of one of them does not affect the probability of the occurrence of the other. That is, two events are independent if either <span class="math display">\[
+P(B|A)=P(B)
+\]</span> or <span class="math display">\[
+P(A|B)=P(A)
+\]</span> Meanwhile, (A', B), (A, B'), (A', B') are also independent events if A, B are independent events.</p>
+<h3 id="pmf-cdf-and-pdf">PMF, CDF and PDF</h3>
+<ul>
+<li><p><strong>PMF</strong> means probability mass function. Suppose that <span class="math inline">\(X: S → A (A \subseteq R\)</span>) is a discrete random variable defined on a sample space <span class="math inline">\(S\)</span>. Then the probability mass function <span class="math inline">\(f_X: A → [0, 1]\)</span> for <span class="math inline">\(X\)</span> is defined as <span class="math display">\[
+f_{X}(x)=\Pr(X=x)=P(\{s\in S:X(s)=x\})
+\]</span> <strong>Hyper geometric distribution</strong> is one of those common discrete distributions. If we randomly select n items without replacement from a set of N items of which:</p>
+<ul>
+<li>m of the items are of type-1</li>
+<li>and N − m of the items are of type-2</li>
+</ul>
+<p>then the PMF of X, the discrete variable defined as the number of selected type-1 items, is called hyper-geometric distribution, which is: <span class="math display">\[
+P(X=x)=f(x)=\frac{\binom mx\binom {N\,-\,m}{n\,-\,x}}{\binom Nn}
+\]</span></p></li>
+<li><p><strong>CDF</strong>, also called cumulative distribution function, is generally a function of a real-valued random variable <span class="math inline">\(X\)</span> given by <span class="math display">\[
+F_{X}(x)=\operatorname {P} (X\leq x)
+\]</span> The CDF of a continuous random variable <span class="math inline">\(X\)</span> can be expressed as the integral of its probability density function <span class="math inline">\(f_X\)</span> as follows: <span class="math display">\[
+F_{X}(x)=\int _{-\infty }^{x}f_{X}(t)\,dt
+\]</span></p></li>
+<li><p><strong>PDF</strong>, known as probability density function, is similar with <strong>PMF</strong> while it's defined for continuous random variable. PDF is defined as follows. <span class="math display">\[
+\Pr[a\leq X\leq b]=\int _{a}^{b}f_{X}(x)\,dx.
+\]</span> Hence, if <span class="math inline">\(F_X\)</span> is the cumulative distribution function of continuous random variable <span class="math inline">\(X\)</span>, then: <span class="math display">\[
+F_{X}(x)=\int _{-\infty }^{x}f_{X}(u)\,du
+\]</span> namely, if <span class="math inline">\(f_X\)</span> is continuous at <span class="math inline">\(x\)</span>, <span class="math display">\[
+f_{X}(x)={\frac {d}{dx}}F_{X}(x)
+\]</span> <strong>uniform distribution</strong> is a common continuous distribution, in which the continuous random variable X has average probability in <span class="math inline">\([a, b]\)</span>, denoted as <span class="math inline">\(X\sim U(a, b)\)</span>. Its probability density function is <span class="math display">\[
+\]</span>f(x)=~~~(axb) $$</p></li>
+</ul>
+<h2 id="expectation-and-variance">Expectation and variance</h2>
+<h3 id="expectation">Expectation</h3>
+<p>For discrete variable <span class="math inline">\(X \in S\)</span>, expectation of <span class="math inline">\(x\)</span> is defined as: <span class="math display">\[
+E(X)=\sum_{x\in S}{x\cdot p(X=x)}
+\]</span> e.g. the expectation of hyper-geometric distribution can be calculated as follow: <span class="math display">\[
+\begin{align}E(X)
+&amp;=\sum_{x\in S}x\cdot\frac{\binom mx\binom {N\,-\,m}{n\,-\,x}}{\binom Nn} \\
+&amp;=\sum_{x\in S}\frac{\frac{m!}{(x-1)!(m-x)!}\binom {N\,-\,m}{n\,-\,x}}{\binom Nn} \\
+&amp;=\sum_{x\in S}\frac{m\cdot\binom{m-1}{x-1}\binom {N\,-\,m}{n\,-\,x}}{\binom Nn} \\
+&amp;=\sum_{x\in S}\frac{m\cdot\binom{N-1}{n-1}}{\binom Nn} \\
+&amp;=\frac{mn}{N}
+\end{align}
+\]</span> For continuous variable <span class="math inline">\(X\in \mathbb{R}\)</span>, expectation is defined as: <span class="math display">\[
+{E} [X]=\int _{\mathbb {R} }xf(x)\,dx
+\]</span> The expectation operator is linear in the sense that <span class="math display">\[
+E(aX+bY)=aE(X)+bE(Y)
+\]</span></p>
+<h3 id="variance">Variance</h3>
+<p>The variance of a random variable <span class="math inline">\(X\)</span> is the expected value of the squared deviation from the mean of <span class="math inline">\(X\)</span>. Let <span class="math inline">\(\mu = E[X]\)</span>, <span class="math display">\[
+\operatorname {Var}(X)=E\left[(X-\mu)^{2}\right]\
+\]</span> Substitute with <span class="math inline">\(\mu = E[x]\)</span>, we can have <span class="math display">\[
+\begin{align}
+\operatorname{Var}(X)&amp;=E\left[(X-E[X])^{2}\right]\\
+&amp;=E\left[X^2-2XE[X]+E[X]^2\right]\\
+&amp;=E[X^2]-2E[X]E[X]+E[X]^2 \\
+&amp;=E[X^2]-E[X]^2
+\end{align}
+\]</span> The variance of a sum of random variables and constants is given by <span class="math display">\[
+\operatorname {Var} (aX+bY+c)=a^{2}\operatorname {Var} (X)+b^{2}\operatorname {Var} (Y)+2ab\,\operatorname {Cov} (X,Y)
+\]</span> where <span class="math inline">\(\operatorname{Cov}(\cdot,\cdot)\)</span> is the covariance.</p>
+<h3 id="covariance">Covariance</h3>
+<p>The covariance between two jointly distributed real-valued random variables <span class="math inline">\(X\)</span> and <span class="math inline">\(Y\)</span> is defined and transformed as: <span class="math display">\[
+\begin{align}
+\operatorname{Cov}(X, Y)&amp;=E[(X-E(X))(Y-E(Y)]\\
+&amp;=E[XY-XE(Y)-YE(X)+E(X)E(Y)]\\
+&amp;=E[XY]-E[X]E[Y]
+\end{align}
+\]</span> Note that <span class="math inline">\(\operatorname{Var}(X) = \operatorname{Cov}(X, X)\)</span>. Meanwhile, for random variables X, Y in joint support S, suppose <span class="math inline">\(f(x,y)\)</span> is the joint probability density function defined on <span class="math inline">\((x,y)\in S\)</span>.</p>
+<p>For X and Y are discrete random variables, <span class="math display">\[
+\operatorname{Cov}(x,y)=\sum_{(x,y)\in S}(x-\mu_x)(y-\mu_y)f(x,y)
+\]</span> and for X and Y are continuous random variables, <span class="math display">\[
+\operatorname{Cov}(x,y)=\iint_{(x,y)\in S}(x-\mu_x)(y-\mu_y)f(x,y)dxdy
+\]</span></p>
+<h3 id="correlation">Correlation</h3>
+<p>The correlation is defined as: <span class="math display">\[
+\rho_{xy}=\operatorname{Corr}(X,Y)=\frac{\operatorname{Cov}(X,Y)}{\sigma_x\sigma_y}=\frac{\sigma_{xy}}{\sigma_x\sigma_y}\in[-1,1]
+\]</span> When <span class="math inline">\(\operatorname{Corr}(X,Y)\)</span> is close to <span class="math inline">\(\pm 1\)</span>, a strong linear relationship between <span class="math inline">\(X\)</span> and <span class="math inline">\(Y\)</span> is indicated.</p>
+<h3 id="sample-expectation-and-variance">Sample expectation and variance</h3>
+<p>Here we suppose <span class="math inline">\(X_1\)</span>, <span class="math inline">\(X_2\)</span>, <span class="math inline">\(\dots\)</span> , <span class="math inline">\(X_n\)</span> are observations of a random sample of size n. Then</p>
+<ul>
+<li><span class="math inline">\(\bar{X}=\frac{1}{n}\sum_{i=1}^{n}{X_i}\)</span> is the sample mean of the n observations, and</li>
+<li><span class="math inline">\(S^2=\frac{1}{n-1}\sum_{i=1}^{n}{(X_i-\bar{X})^2}\)</span> is the sample variance of the n observations</li>
+</ul>
+<p>Proof: Here we assume the original expectation(mean) and variance of <span class="math inline">\(X_i\)</span> to be <span class="math inline">\(\mu, \sigma^2\)</span>. Then we have: <span class="math display">\[
+E(\bar{X})=E(\frac{1}{n}\sum_{i=1}^{n}{X_i})=\frac{1}{n}\sum_{i=1}^{n}{E(X_i)}=\frac{1}{n}\sum_{i=1}^{n}{\mu}=\mu
+\]</span></p>
+<p><span class="math display">\[
+\begin{align}
+E(S^2)&amp;=E\left[\frac{1}{n-1}\sum_{i=1}^{n}{(X_i-\bar{X})^2}\right]\\
+&amp;=\frac{1}{n-1}\sum_{i=1}^{n}E\left(X_i-\frac{\sum_{j=1}^{n}X_j}{n}\right)^2\\
+&amp;=\frac{1}{n-1}\sum_{i}E\left[X_i^2-2\frac{X_i\sum_{j}X_j}{n}+\frac{(\sum_j{X_j})^2}{n^2}\right]\\
+&amp;=\frac{1}{n-1}\left\{\sum_i{E(X_i^2})-E\left[\frac{(\sum_i{X_i})^2}{n}\right]\right\}\\
+&amp;=\frac{1}{n-1}\left[\frac{n-1}{n}\sum_i{E(X_i^2)}-\frac{1}{n}\sum_{i,j\neq i}E(X_iX_j)\right]\\
+\end{align}
+\]</span></p>
+<p>Notice that <span class="math inline">\(X_1, X_2, ..., X_n\)</span> are independent variables, which means <span class="math inline">\(\forall i,j \in 1,\dots,n, Cov(X_i, X_j)=0\)</span>. Namely, <span class="math inline">\(E(X_iX_j)=E(X_i)E(X_j)\)</span>. So we have <span class="math display">\[
+\begin{align}
+E(S^2)&amp;=\frac{1}{n-1}\left[\frac{n-1}{n}\sum_i{E(X_i^2)}-\frac{1}{n}\sum_{i,j\neq i}E(X_i)E(X_j)\right]\\
+&amp;=\frac{1}{n-1}\cdot\frac{n-1}{n}\sum_i{\left[E(X_i^2)-E(X_i)^2\right]}\\
+&amp;=\frac{1}{n}\cdot n\operatorname{Var}(X_i)\\
+&amp;=\sigma^2
+\end{align}
+\]</span> It can be proved that <span class="math inline">\(S^2\)</span> and <span class="math inline">\(\bar{X}\)</span> are independent. In addition, if <span class="math inline">\(X_1, X_2, \dots, X_n\)</span> subject to normal distribution, then <span class="math display">\[
+\frac{(n-1)S^2}{\sigma^2}=\frac{\sum_{i=1}^{n}{(X_i-\bar{X})^2}}{\sigma^2}\sim \chi^2(n-1)
+\]</span></p>
+<h3 id="moment-generating-function">Moment Generating Function</h3>
+<p>Consider the Taylor expansion form of exponential function <span class="math inline">\(e^{tx}\)</span> at <span class="math inline">\(x=0\)</span>, which is <span class="math display">\[
+e^{tx} = 1+tx+\frac{(tx)^2}{2!}+\frac{(tx)^3}{3!}+\cdots
+\]</span> If we replace x with random variable X, and consider the expected value of both sides, the result will be <span class="math display">\[
+E(e^{tX})=1+tE(X)++\frac{t^2E(X^2)}{2!}+\frac{t^3E(X^3)}{3!}+\cdots
+\]</span> Here, we define the moment generating function of a continuous random variable X, if it exists, to be <span class="math display">\[
+M(t)=E(e^{tX})=\int_{-\infty}^{+\infty}e^{tx}f(x)dx
+\]</span> for <span class="math inline">\(-h&lt;x&lt;h\)</span>. From the equations above, it's clearly that <span class="math display">\[
+M^{(r)}{(0)}=E(X^r)+\sum_{i\geq 1} a_it^i
+\]</span> Meanwhile, let <span class="math inline">\(S\)</span> be the set of possible values of <span class="math inline">\(X\)</span>, then <span class="math display">\[
+M(t)=E(e^{tX})=\sum_{x\in S}e^{tx}f(x)
+\]</span> Therefore, the coefficient of <span class="math inline">\(e^{tx}\)</span> is the probability: <span class="math display">\[
+f(x)=P(X=x)
+\]</span></p>
+<h2 id="typical-discrete-distributions">Typical discrete distributions</h2>
+<h3 id="binomial-distributions">Binomial Distributions</h3>
+<p><span class="math inline">\(2\)</span> results, <span class="math inline">\(n\)</span> samplings. Let <span class="math inline">\(X\)</span> to be the frequency of the result with probability <span class="math inline">\(P\)</span> to be selected in a single sampling. Then we say X subjects to binomial distribution, write as <span class="math inline">\(X\sim B(n,p)\)</span>. And we have: <span class="math display">\[
+\begin{align}
+P(X=k)&amp;={n \choose k}p^{k}(1-p)^{n-k}\\
+E[X]&amp;=np\\
+\operatorname{Var}(X)&amp;=np(1-p)
+\end{align}
+\]</span></p>
+<h3 id="poisson-distributions">Poisson Distributions</h3>
+<p>A Poisson distribution tries to describe such a situation: an event can occur 0, 1, 2, … times in an interval. The average number of events in an interval is designated <span class="math inline">\(\lambda\)</span>. Lambda is the event rate, also called the rate parameter. Let random variable <span class="math inline">\(X\)</span> to note the number of observed events in an interval. Then we have <span class="math display">\[
+ P(X=k)=e^{-\lambda }{\frac {\lambda ^{k}}{k!}}
+\]</span> The mean and variance for Poisson distribution are both <span class="math inline">\(\lambda\)</span>. Besides, notice that <span class="math inline">\(\sum_{i}\lambda^i/i!\)</span> is the Taylor series of <span class="math inline">\(e^x\)</span> at <span class="math inline">\(x_0=0, x=\lambda\)</span>. Therefore, we can say definitely that <span class="math display">\[
+\sum_{k=0}^{+\infty}P(X=k)=1
+\]</span> In fact, Poisson distribution could be derived from binomial distribution. Suppose <span class="math inline">\(n\rightarrow +\infty\)</span> while <span class="math inline">\(np = const\)</span>. Let <span class="math inline">\(np = \lambda\)</span>, then <span class="math display">\[
+\begin{align}
+P(X=k)&amp;=\lim_{n\rightarrow +\infty}{n\choose k}p^k(1-p)^{n-k}\\
+&amp;=\lim_{n\rightarrow +\infty}\frac{n(n-1)\cdots(n-k+1)}{k!}\cdot\frac{\lambda^k}{n^k}(1-\frac{\lambda}{n})^{n-k}\\
+&amp;=e^{-\lambda}\lim_{n\rightarrow +\infty}(1-\frac{1}{n})(1-\frac{2}{n})\cdots(1-\frac{k-1}{n})\frac{\lambda^k}{k!}\\
+&amp;=e^{-\lambda}\frac{\lambda^k}{k!}
+\end{align}
+\]</span> With <span class="math inline">\(n\geq 20, p\leq 0.05\)</span>, the Poisson distribution can be used to approximate the binomial distribution by setting <span class="math inline">\(\lambda=np\)</span>.</p>
+<h2 id="typical-continuous-distributions">Typical continuous distributions</h2>
+<h3 id="uniform-distributions">Uniform Distributions</h3>
+<p>We have introduced this kind of distributions above, here are some other properties of it. For <span class="math inline">\(a\leq x\leq b\)</span>, we have <span class="math display">\[
+\begin{align}
+F(x)&amp;=\frac{x-a}{b-a}\\
+\mu=E(X)&amp;=\frac{a+b}{2}\\
+\sigma^2=\operatorname{Var}(X)&amp;=\frac{(b-a)^2}{12}
+\end{align}
+\]</span></p>
+<h3 id="exponential-distribution">Exponential Distribution</h3>
+<p>The continuous random variable X follows an exponential distribution if its probability density function is: <span class="math display">\[
+f(x)=\frac{1}{\theta}e^{-x/\theta}~~~(x\geq0,\theta&gt;0)
+\]</span> For <span class="math inline">\(x\geq0,\theta&gt;0\)</span>. Besides, <span class="math display">\[
+\begin{align}
+F(x)&amp;=-e^{-x/\theta}+1\\
+\mu=E(X)&amp;=\theta\\
+\sigma^2=\operatorname{Var}(X)&amp;=\theta^2
+\end{align}
+\]</span> Here's an derivation of exponential distribution. Suppose a random event <span class="math inline">\(e\)</span> happens randomly in <span class="math inline">\(t\in [0,\infty)\)</span>, with an average frequency <span class="math inline">\(\lambda\)</span> to happen in an interval of length 1. This is to say that the number of <span class="math inline">\(e\)</span> in an interval follows Poisson distribution. Let <span class="math inline">\(X\)</span> note the distribution of the first appearance of <span class="math inline">\(e\)</span>. Then we have <span class="math display">\[
+\begin{align}
+F(X=x)&amp;=P(X\leq x)=1-P&amp;(e~happens~0~time~in~[0,x])\\
+&amp;=1-e^{-\lambda x}\frac{(\lambda x)^0}{0!}~~~&amp;\text{(from Poisson distribution)}\\
+\Rightarrow f(x)&amp;=F&#39;(x)=\lambda e^{-\lambda x}
+\end{align}
+\]</span> Let <span class="math inline">\(\theta = \frac{1}{\lambda}\)</span>, then <span class="math display">\[
+f(x)=\frac{1}{\theta}e^{-x/\theta}
+\]</span></p>
+<h3 id="gamma-distribution">Gamma Distribution</h3>
+<h4 id="derivation-of-gamma-distribution"><em>Derivation of Gamma Distribution</em></h4>
+<p>Consider the derivation of exponential distribution. In the same way, we suppose a random event <span class="math inline">\(e\)</span> happens randomly in <span class="math inline">\(t\in [0,\infty)\)</span>, with an average frequency <span class="math inline">\(\lambda\)</span> to happen in an interval of length 1. However, we let <span class="math inline">\(X\)</span> note the distribution of the <span class="math inline">\(\alpha^{th}\)</span> appearance of <span class="math inline">\(e\)</span>. Then: <span class="math display">\[
+\begin{align}
+F(X=x)&amp;=P(X\leq x)=1-\sum_{i=0}^{\alpha-1}P(e~happens~i~time~in~[0,x])\\
+&amp;=1-\sum_{i=0}^{\alpha-1}e^{-\lambda x}\frac{(\lambda x)^i}{i!}~~~~~\text{(from Poisson distribution)}\\
+\Rightarrow f(x)&amp;=F&#39;(x)=\lambda e^{-\lambda x}\left\{1+\sum_{i=1}^{\alpha-1}\left[\frac{(\lambda x)^i}{i!}-\frac{(\lambda x)^{i-1}}{(i-1)!}\right]\right\}\\
+&amp;=\lambda^\alpha e^{-\lambda x}\cdot\frac{x^{\alpha-1}}{(\alpha-1)!}
+\end{align}
+\]</span> Let <span class="math inline">\(\theta = \frac{1}{\lambda}\)</span>, then <span class="math display">\[
+f(x)=\frac{1}{\theta^\alpha(\alpha-1)!}e^{-x/\theta}x^{\alpha-1}
+\]</span> When <span class="math inline">\(\alpha=1\)</span>, gamma distribution turns out to be exponential distribution. In the other hand, when <span class="math inline">\(\theta=2\)</span>, <span class="math inline">\(\alpha=r/2\)</span>, gamma distribution becomes Chi-square distribution.</p>
+<p>The Gamma distribution has a mean of <span class="math inline">\(\mu=\alpha\theta\)</span> and a variance of <span class="math inline">\(\sigma^2=\alpha\theta^2\)</span>.</p>
+<h4 id="the-gamma-function"><em>The Gamma Function</em></h4>
+<p>The gamma function, denoted <span class="math inline">\(\Gamma(t)\)</span>, is defined, for <span class="math inline">\(t\geq 0\)</span>, by: <span class="math display">\[
+\Gamma(t)=\int_0^\infty y^{t-1}e^{-y}dy
+\]</span> Moreover, <span class="math display">\[
+\Gamma(t)=\frac{y^t}{t}\cdot e^{-y}\,\bigg|_0^{\infty}-\int_0^\infty\frac{y^t}{t}\cdot(-e^{-y})dy=\frac{1}{t}\Gamma(t+1)
+\]</span> therefore we have <span class="math inline">\(\Gamma(t+1)=t\,\Gamma(t)\)</span>.</p>
+<p>In addition, when <span class="math inline">\(t=1\)</span>, <span class="math display">\[
+\Gamma(t)=\int_0^\infty e^{-y}dy=-e^{-y}\,\bigg|_0^{\infty}=1
+\]</span> In conclusion, for <span class="math inline">\(n\in\mathbb{N}\)</span>, <span class="math display">\[
+\Gamma(n)=(n-1)!
+\]</span></p>
+<h4 id="chi-square-distribution"><em>Chi-square Distribution</em></h4>
+<p>Let <span class="math inline">\(X\)</span> follow a gamma distribution with <span class="math inline">\(\theta=2\)</span> and <span class="math inline">\(\alpha=r/2\)</span>, where r is a positive integer. Then the probability density function of X will be: <span class="math display">\[
+f(x)=\frac{1}{2^{r/2}\Gamma(\frac{r}{2})}e^{-x/2}x^{r/2-1}(x&gt;0)
+\]</span> Notice that the Gamma function is the analytic continuation of the factorial function. As <span class="math inline">\(r/2\)</span> can be non-integer while <span class="math inline">\(r\)</span> is an integer, we use the Gamma function here to replace the factorial function here.</p>
+<p>The expectation of <span class="math inline">\(\chi^2\)</span>-distribution is <span class="math inline">\(\mu=r\)</span>, while the variance is <span class="math inline">\(\sigma^2=2r\)</span>. <span class="math inline">\(r\)</span> is called degree of freedom in <span class="math inline">\(\chi^2\)</span>-distribution.</p>
+<p>In addition, we have &gt; <strong>Theorem 1</strong>. If <span class="math inline">\(Z_1,\dots,Z_k\sim\mathcal{N}(0,1)\)</span> are independent, then the sum of their squares, &gt; <span class="math display">\[
+&gt; Q\ =\sum _{i=1}^{k}Z_{i}^{2}
+&gt; \]</span> &gt; is distributed according to the chi-squared distribution with k degrees of freedom. &gt; &gt; <strong>Theorem 2</strong>. Let <span class="math inline">\(X_i\)</span> denote <span class="math inline">\(n\)</span> independent random variables that follow these chi-square distributions, e.g., <span class="math inline">\(X_1\sim\chi^2(r_1)\)</span>, <span class="math inline">\(X_2\sim\chi^2(r_2)\)</span>, etc. Then, the sum of the random variables &gt; <span class="math display">\[
+&gt; Y=X_1+X_2+\cdots+X_n
+&gt; \]</span> &gt; follows a chi-square distribution with <span class="math inline">\(r_1+r_2+\dots+r_n\)</span> degrees of freedom. That is: &gt; <span class="math display">\[
+&gt; Y\sim\chi^2(r_1+r_2+\dots+r_n)
+&gt; \]</span></p>
+<p>While this can be proved with <a target="_blank" rel="noopener" href="https://newonlinecourses.science.psu.edu/stat414/node/72/">MGF</a>, we're not going to introduce the proof here. Just take it as a conclusion.</p>
+<h3 id="an-interesting-story-of-betadirichlet-distribution">An interesting story of Beta/Dirichlet distribution</h3>
+<p>See <a target="_blank" rel="noopener" href="https://cosx.org/2013/01/lda-math-beta-dirichlet">here</a>.</p>
+<h3 id="normal-distribution-or-gaussian-distribution">Normal Distribution (or Gaussian Distribution)</h3>
+<p>The probability density function of <span class="math inline">\(\mathcal{N}(\mu, \sigma)\)</span> is <span class="math display">\[
+{\displaystyle f(x)=\frac{1}{\sqrt{2\pi\sigma^2}}e^{-\frac{(x-\mu)^2}{2\sigma^2}}}
+\]</span> We can know from the last chapter (<em>Basic knowledge in calculus</em>) that <span class="math display">\[
+\int_{-\infty}^{\infty}{\frac{1}{\sqrt{2\pi\sigma^2}}e^{-\frac{(x-\mu)^2}{2\sigma^2}}dx} = 1
+\]</span> In addition, we have &gt; <strong>Theorem</strong>. Let <span class="math inline">\(X_i\)</span> denote <span class="math inline">\(n\)</span> independent random variables that follow these normal distributions. &gt; e.g., <span class="math inline">\(X_1\sim\mathcal{N}(\mu_1,\sigma_1^2)\)</span>, <span class="math inline">\(X_2\sim\mathcal{N}(\mu_2,\sigma_2^2)\)</span>, etc. Then, the linear combination &gt; <span class="math display">\[
+&gt; Y=c_1X_1+c_2X_2+\cdots+c_nX_n
+&gt; \]</span> &gt; follows the normal distribution: &gt; <span class="math display">\[
+&gt; Y\sim\mathcal{N}(\sum_{i=1}^nc_i\mu_i,\sum_{i=1}^nc_i^2\sigma_i^2)
+&gt; \]</span> &gt;</p>
+<h4 id="z-scores"><em>Z Scores</em></h4>
+<p>It can be proved that, for <span class="math inline">\(X\sim \mathcal{N}(0,1)\)</span>, <span class="math display">\[
+Z=\frac{x-\mu}{\sigma}\sim \mathcal{N}(0,1)
+\]</span> This formula is also the defination of Z score.</p>
+<h4 id="relationship-of-normal-distribution-and-chi2-distribution"><em>Relationship of Normal Distribution and <span class="math inline">\(\chi^2\)</span> Distribution</em></h4>
+<blockquote>
+<p><strong>Theorem</strong>. If <span class="math inline">\(X\)</span> is normally distributed with mean <span class="math inline">\(\mu\)</span> and variance <span class="math inline">\(\sigma^2\geq 0\)</span>, then: <span class="math display">\[
+V=\left(\frac{X-\mu}{\sigma}\right)^2=Z^2
+\]</span> is distributed as a chi-square random variable with 1 degree of freedom.</p>
+</blockquote>
+<p>Proof: Namely it's to prove that <span class="math display">\[
+P(Z^2=v)=P(V=v)=g(v)=\frac{1}{\Gamma(1/2)2^{1/2}}e^{-v/2}v^{-1/2}
+\]</span> Meanwhile, <span class="math display">\[
+\begin{align}
+G(v)=P(Z^2\leq v)&amp;=P(-\sqrt{v}\leq Z\leq\sqrt{v})\\
+&amp;=\int_{-\sqrt v}^{\sqrt v}\frac{1}{\sqrt{2\pi}}e^{-x^2/2}dx\\
+&amp;=2\int_0^{\sqrt v}\frac{1}{\sqrt{2\pi}}e^{-x^2/2}dx\\
+&amp;=\int_0^{v}\frac{1}{\sqrt{2\pi}}z^{-1/2}e^{-z/2}dz\\
+\Rightarrow g(v)&amp;=\frac{dG(v)}{dv}=\frac{d\left(\int_0^{v}\frac{1}{\sqrt{2\pi}}z^{-1/2}e^{-z/2}dz\right)}{dv}\\
+&amp;=\frac{1}{\sqrt{2\pi}}v^{-1/2}e^{-v/2}
+\end{align}
+\]</span> Also, <span class="math display">\[
+\begin{align}
+\Gamma(1/2)&amp;=\int_0^\infty y^{-1/2}e^{-y}dy\\
+&amp;=\int_0^\infty 2e^{-u^2}du\\
+&amp;=\int_{-\infty}^\infty e^{-u^2}du=\sqrt{\pi}
+\end{align}
+\]</span> Therefore, <span class="math display">\[
+g(v)=\frac{1}{\Gamma(1/2)2^{1/2}}e^{-v/2}v^{-1/2}
+\]</span> Our proof is complete. Moreover, we have <span class="math display">\[
+\frac{(n-1)S^2}{\sigma^2}=\frac{\sum_{i=1}^{n}(X_i-\bar{X})^2}{\sigma^2}\sim\chi^2(n-1)
+\]</span></p>
+<h2 id="central-limit-theorem">Central limit theorem</h2>
+<h3 id="definition">Definition</h3>
+<p>Let <span class="math inline">\(X_1, X_2, \dots, X_n\)</span> be a random sample from any distribution with (finite) mean <span class="math inline">\(\mu\)</span> and (finite) variance <span class="math inline">\(\sigma^2\)</span>. If the sample size <span class="math inline">\(n\)</span> is sufficiently large, then:</p>
+<ul>
+<li>the sample mean <span class="math inline">\(\bar{X}\)</span> follows an approximate normal distribution</li>
+<li>with mean <span class="math inline">\(E(\bar{X})=\mu\)</span> and variance <span class="math inline">\(Var(\bar{X})=\frac{\sigma^2}{n}\)</span></li>
+</ul>
+<h2 id="statistical-hypothesis-test">Statistical Hypothesis Test</h2>
+<h3 id="about-null-hypothesis">About <em>Null Hypothesis</em></h3>
+<p>The null hypothesis is a general statement or default position that there is no relationship between two measured phenomena, or no association among groups. Testing (trying to accept or reject) the null hypothesis — and thus concluding that there is or is not a relationship between two phenomena— is a central task in the modern practice of science.</p>
+<p>Null Hypothesis is often denoted as <span class="math inline">\(H_0\)</span>, while the hypothesis being tested against it, also called the alternative hypothesis, is often denoted as <span class="math inline">\(H_1\)</span>. <span class="math inline">\(p\)</span> is generally used for denoting the probability of <span class="math inline">\(H_0\)</span>, namely, the probability of there's no real difference.</p>
+<h3 id="students-t-test">Student's t-Test</h3>
+<p>The t-test is any statistical hypothesis test in which the test statistic follows a Student's t-distribution under the null hypothesis. It was introduced in 1908 by William Sealy Gosset under his pen name "Student".</p>
+<blockquote>
+<p><strong>t-distribution</strong> Definition. If <span class="math inline">\(Z\sim\mathcal{N}(0,1)\)</span> and <span class="math inline">\(U\sim\chi^2(r)\)</span> are independent, then the random variable: <span class="math display">\[
+T=\frac{Z}{\sqrt{U/r}}
+\]</span> follows a t-distribution with <span class="math inline">\(r\)</span> degrees of freedom. We write <span class="math inline">\(T\sim t(r)\)</span>. The p.d.f. of <span class="math inline">\(T\)</span> is: <span class="math display">\[
+\frac{\Gamma \left(\frac{\nu+1}{2} \right)} {\sqrt{\nu\pi}\,\Gamma \left(\frac{\nu}{2} \right)} \left(1+\frac{x^2}{\nu} \right)^{-\frac{\nu+1}{2}}\!
+\]</span> It's clear that, for <span class="math inline">\(X_1,X_2,\dots,X_n\sim\mathcal{N}(\mu,\sigma^2)\)</span>, <span class="math display">\[
+\frac{\bar{X}-\mu}{\sigma/\sqrt{n}}\sim\mathcal{N}(0,1)
+\]</span> And now we have: <span class="math display">\[
+\frac{\bar{X}-\mu}{s/\sqrt{n}}\sim t(n-1)
+\]</span> where <span class="math inline">\(s\)</span> is the sample standard deviation.</p>
+</blockquote>
+<p>Most test statistics have the form <span class="math inline">\(t=Z/S\)</span>, where <span class="math inline">\(Z\)</span> and <span class="math inline">\(S\)</span> are functions of the data.</p>
+<ul>
+<li><span class="math inline">\(Z\)</span> may be sensitive to the alternative hypothesis (i.e., its magnitude tends to be larger when the alternative hypothesis is true)</li>
+<li><span class="math inline">\(S\)</span> is a scaling parameter that allows the distribution of t to be determined.</li>
+<li><span class="math inline">\(S^2\)</span> should follow a <span class="math inline">\(\chi^2\)</span> distribution with <span class="math inline">\(p\)</span> degrees of freedom under the null hypothesis, where <span class="math inline">\(p\)</span> is a positive constant</li>
+</ul>
+<h4 id="one-sample-t-test"><em>One-sample t-test</em></h4>
+<p>Let <span class="math inline">\(Z=\bar{X}-\mu,\,S=s/\sqrt{n}\)</span>, then <span class="math display">\[
+{\displaystyle t={\frac {\bar{x}-\mu_{0}}{s/\sqrt {n}}}}
+\]</span> Note that <span class="math display">\[
+S^2=\frac{s^2}{n}=\sum_{i=1}^n\frac{(X_i-\bar{X})^2}{n(n-1)}
+\]</span></p>
+<h4 id="two-sample-t-test"><em>Two-sample t-test</em></h4>
+<table>
+<colgroup>
+<col style="width: 25%" />
+<col style="width: 37%" />
+<col style="width: 37%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: center;">When to do this test</th>
+<th style="text-align: center;"><span class="math inline">\(S\)</span></th>
+<th style="text-align: center;">Degree of Freedom</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">Small sample, <span class="math inline">\(\sigma_1^2=\sigma_2^2\)</span></td>
+<td style="text-align: center;"><span class="math inline">\({\displaystyle \sqrt{s^2_{pool}\left(\frac{1}{n_1}+\frac{1}{n_2}\right)}}\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(n_1+n_2-2\)</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">Small sample, <span class="math inline">\(\sigma_1^2\neq\sigma_2^2\)</span></td>
+<td style="text-align: center;"><span class="math inline">\({\displaystyle \sqrt{\frac{s^2_1}{n_1}+\frac{s^2_2}{n_2}}}\)</span></td>
+<td style="text-align: center;"><span class="math inline">\({\displaystyle \left.{\left({\frac {s_{1}^{2}}{n_{1}}}+{\frac {s_{2}^{2}}{n_{2}}}\right)^{2}}\middle/\left(\frac {\left(s_{1}^{2}~/~n_{1}\right)^{2}}{n_{1}-1}+\frac {\left(s_{2}^{2}~/~n_{2}\right)^{2}}{n_{2}-1}\right)\right.}\)</span></td>
+</tr>
+</tbody>
+</table>
+<h3 id="z-test">Z-Test</h3>
+<p>A Z-test is any statistical test for which the distribution of the test statistic under the null hypothesis can be approximated by a normal distribution. Because of the central limit theorem, many test statistics are approximately normally distributed for large samples.</p>
+<h4 id="relationship-with-students-t-test"><em>Relationship with Student's t-Test</em></h4>
+<p>For each significance level, the Z-test has a single critical value which makes it more convenient than the Student's t-test which has separate critical values for each sample size. Statistical tests with large sample size or known population variance can be conveniently performed as approximate Z-tests. If the population variance is unknown (and therefore has to be estimated from the sample itself) and the sample size is not large (n &lt; 30), the Student's t-test may be more appropriate.</p>
+<h3 id="pearsons-chi-squared-test">Pearson's chi-squared test</h3>
+<p>Pearson's chi-squared test is used to assess three types of comparison:</p>
+<ul>
+<li>goodness of fit</li>
+<li>homogeneity</li>
+<li>independence</li>
+</ul>
+<p>It tests a null hypothesis stating that:</p>
+<blockquote>
+<p>The frequency distribution of certain events observed in a sample is consistent with a particular theoretical distribution.</p>
+</blockquote>
+<p>The events considered must be mutually exclusive and have total probability 1.</p>
+<h4 id="testing-for-statistical-independence"><em>Testing for statistical independence</em></h4>
+<p>For a contingency table with <span class="math inline">\(r\)</span> rows and <span class="math inline">\(c\)</span> columns, the value of the test-statistic is</p>
+<p><span class="math display">\[
+\chi ^{2}=\sum_{i=1}^{r}\sum_{j=1}^{c}{(O_{i,j}-E_{i,j})^{2}\over E_{i,j}}
+\]</span> in which <span class="math inline">\(O_{i,j},E_{i,j}\)</span> notes the observation and expectation in each cell, and the number of degrees of freedom <span class="math inline">\(DF=(r-1)(c-1)\)</span>.</p>
+<h4 id="yates-correction-for-continuity"><em>Yates' Correction for Continuity</em></h4>
+<p>The approximation to the chi-squared distribution breaks down if expected frequencies are too low.</p>
+<ul>
+<li>Normally the approximation is acceptable when no more than 20% of the events have expected frequencies below 5.</li>
+<li>Where <span class="math inline">\(DF=1\)</span>, the approximation is acceptable when expected frequencies are no less than 10.</li>
+</ul>
+<p>In this case, a better approximation can be obtained by reducing the absolute value of each difference between observed and expected frequencies by 0.5 before squaring; this is called Yates's correction for continuity.</p>
+<h3 id="anova">ANOVA</h3>
+<p>ANOVA, an abbreviation of <em>Analysis of Variance</em>, is a collection of statistical models and their associated estimation procedures used to analyze the differences among group means in a sample.</p>
+<p>In ANOVA, we generally make the following assumptions:</p>
+<ul>
+<li>Independence of observations – this is an assumption of the model that simplifies the statistical analysis.</li>
+<li>Normality – the distributions of the residuals are normal.</li>
+<li>Equality (or "homogeneity") of variances, called homoscedasticity — the variance of data in groups should be the same.</li>
+</ul>
+<h4 id="one-way-anova"><em>One-way ANOVA</em></h4>
+<p>Suppose we did a research about personal annual income in several major cities, and here's the survey result:</p>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: center;">Cities</th>
+<th style="text-align: center;">Samples</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">Beijing</td>
+<td style="text-align: center;"><span class="math inline">\(X_{11},X_{12},X_{13},\dots\)</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">Shanghai</td>
+<td style="text-align: center;"><span class="math inline">\(X_{21},X_{22},X_{23},\dots\)</span></td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">Guangzhou</td>
+<td style="text-align: center;"><span class="math inline">\(X_{31},X_{32},X_{33},\dots\)</span></td>
+</tr>
+</tbody>
+</table>
+<p>Cities are called affect factor here. Now we want to know if there is a relationship between people's annual income and cities. For each group, assume the data obey a normal distribution <span class="math inline">\(\mathcal{N}(\mu_i, \sigma^2)\)</span>, then the null hypothesis can be: <span class="math display">\[H_0:\mu_1=\cdots=\mu_g\]</span> in which <span class="math inline">\(g\)</span> is the number of groups. Here we consider three statistics, which is:</p>
+<ul>
+<li>The total sum of squares, namely the variance: <span class="math display">\[S_T^2=\sum_{i=1}^{g}\sum_{j=1}^{n_i}(X_{ij}-\bar{X})^2\]</span></li>
+<li>The intragroup sum of squares, introduced by affect factors: <span class="math display">\[S_A^2=\sum_{i=1}^{g}n_i(\bar{X_i}-\bar{X})^2\]</span></li>
+<li>The intergroup sum of squares, introduced by stochastic error: <span class="math display">\[S_E^2=\sum_{i=1}^{g}\sum_{j=1}^{n_i}(X_{ij}-\bar{X_i})^2\]</span></li>
+</ul>
+<p>We can easily prove that: <span class="math display">\[
+S_T^2=S_A^2+S_E^2
+\]</span> When <span class="math inline">\(H_0\)</span> is true, we have: <span class="math display">\[
+S_A\sim\chi^2(g-1),S_E\sim\chi^2(n-g)
+\]</span> Define <span class="math inline">\(F\)</span> as the ratio of the between group variance and the within group variance, namely, <span class="math display">\[
+F=\frac{S_A/(g-1)}{S_E/(n-g)}\sim F(g-1,n-g)
+\]</span> <span class="math inline">\(F(g-1,n-g)\)</span> here means the F-distribution.</p>
+<blockquote>
+<p><strong>Definition of F-distribution</strong> A random variate of the F-distribution with parameters d1 and d2 arises as the ratio of two scaled chi-squared variates: <span class="math display">\[
+X=\frac{U_1/d_1}{U_2/d_2}
+\]</span> where:</p>
+<ul>
+<li>U1 and U2 have chi-squared distributions with d1 and d2 degrees of freedom respectively, and</li>
+<li>U1 and U2 are independent.</li>
+</ul>
+</blockquote>
+<p>Therefore, under a given significance level <span class="math inline">\(\alpha\)</span>, the rejection region is <span class="math display">\[
+K_0={F&gt;F_{1-\alpha}(g-1,n-g)}
+\]</span></p>
+<h2 id="basic-knowledge-in-calculus">Basic knowledge in calculus</h2>
+<p>Some basic knowledge should be introduced ahead of normal distribution, as they can be helpful to understand the distribution function of normal distribution. ### Jacobi Matrix <span class="math display">\[\mathbf {J} = {\begin{bmatrix}{
+\dfrac{\partial \mathbf {f} }{\partial x_{1}}} &amp;
+\cdots &amp;
+{\dfrac {\partial \mathbf {f} }{\partial x_{n}}}\end{bmatrix}}={\begin{bmatrix}
+{\dfrac {\partial f_{1}}{\partial x_{1}}} &amp; \cdots &amp; {\dfrac {\partial f_{1}}{\partial x_{n}}} \\
+\vdots &amp;\ddots &amp;\vdots \\
+{\dfrac {\partial f_{m}}{\partial x_{1}}} &amp; \cdots &amp; {\dfrac {\partial f_{m}}{\partial x_{n}}}
+\end{bmatrix}}\]</span></p>
+<h3 id="integration-by-substitution">Integration by substitution</h3>
+<p>Let <span class="math inline">\(x = \varphi(u)\)</span>, then we have <span class="math display">\[
+\begin{align}
+\int_{\varphi(a)}^{\varphi(b)}{f(x)}\,dx &amp;= \int_{\varphi(u)=\varphi(a)}^{\varphi(b)}{f(\varphi(u))}\,d\varphi(u)\\
+&amp;=\int_a^b{f(\varphi(u))\varphi&#39;(u)\,du}
+\end{align}
+\]</span> Further, let <span class="math inline">\((x, y) = (x(a, b), y(a, b))\)</span>, then <span class="math display">\[
+\iint_{(x,y)\in C} f(x, y)\,dx\,dy = \iint_{(x(a,b),y(a,b))\in C}{f(x(a,b), y(a,b))\big|\mathbf{J}\big|\,da\,db}
+\]</span> in which <span class="math inline">\(\mathbf{J} = {\begin{bmatrix} {\dfrac {\partial x}{\partial a}}&amp; {\dfrac {\partial x}{\partial b}}\\ {\dfrac {\partial y}{\partial a}}&amp; {\dfrac {\partial y}{\partial b}} \end{bmatrix}}\)</span> is the <strong>Jacobi</strong> matrix in the instance. <span class="math inline">\(\big|\mathbf{J}\big|\)</span> means the determinant of the matrix.</p>
+<p>In particular, when replacing Cartesian coordinate system by polar coordinate system, we have <span class="math display">\[
+\begin{cases}
+    x = rcos{\theta}\\
+    y = rsin{\theta}
+\end{cases}
+\]</span> therefore, <span class="math display">\[
+\mathbf{J}=\dfrac{\partial (x,y)}{\partial (r, \theta)}={\begin{bmatrix}
+cos{\theta}&amp;-rsin{\theta}\&lt;span class=&quot;&quot;&gt;&lt;/span&gt;\
+sin{\theta}&amp;rcos{\theta}
+\end{bmatrix}} \Rightarrow|\mathbf{J}| = r
+\]</span></p>
+<h3 id="integration-by-parts">Integration by parts</h3>
+<p>If <span class="math inline">\(u = u(x)\)</span> and <span class="math inline">\(du = u&#39;(x)dx\)</span>, while <span class="math inline">\(v = v(x)\)</span> and <span class="math inline">\(dv = v&#39;(x)dx\)</span>, then integration by parts states that: <span class="math display">\[
+\begin{aligned}
+\int _{a}^{b}u(x)v&#39;(x)\,dx&amp;=[u(x)v(x)]_{a}^{b}-\int _{a}^{b}u&#39;(x)v(x)dx\\
+&amp;=u(b)v(b)-u(a)v(a)-\int _{a}^{b}u&#39;(x)v(x)\,dx
+\end{aligned}
+\]</span> or, more compactly, <span class="math display">\[
+\int u\,dv=uv-\int v\,du.\!
+\]</span></p>
+<h3 id="kroneckers-delta">Kronecker's delta</h3>
+<p><span class="math display">\[
+\delta_{i,j} = \begin{cases}
+    1 &amp; \text{if}~~i = j\\
+    0 &amp; \text{otherwise}
+\end{cases}
+\]</span></p>
+<h3 id="intergrability-of-xne-x22">Intergrability of <span class="math inline">\(x^ne^{-x^2/2}\)</span></h3>
+<h4 id="hermite-polynomial"><em>Hermite Polynomial</em></h4>
+<p>For each n, define the Hermite polynomial <span class="math inline">\(H_n(x)\)</span> by <span class="math display">\[
+\frac{d^n}{dx^n}e^{-x^2/2}=(-1)^nH_n(x)e^{-x^2/2}
+\]</span> For example, <span class="math display">\[
+H_0(x) = 1\\
+\frac{d}{dx}e^{-x^2/2}=-xe^{-x^2/2}\Rightarrow H_1(x)=x\\
+\frac{d^2}{dx^2}e^{-x^2/2}=-e^{-x^2/2}+x^2e^{-x^2/2}\Rightarrow H_2(x)=x^2-1\\
+\frac{d^3}{dx^3}e^{-x^2/2}=xe^{-x^2/2}+2xe^{-x^2/2}-x^3e^{-x^2/2}\Rightarrow H_1(x)=x^3-3x
+\]</span></p>
+<p>It's obvios that <span class="math inline">\(\int H_{n+1}{(x)}\,e^{-x^2/2}=-H_{n}{(x)}\,e^{-x^2/2}+C\)</span>, assume that <span class="math display">\[
+x^n=a_nH_n+a_{n-1}H_{n-1}+\cdots+a_0H_0
+\]</span> Because <span class="math inline">\(H_k(x)e^{-x^2/2}\)</span> is integrable for <span class="math inline">\(k \geq 1\)</span>, the integrability of <span class="math inline">\(x^ne^{-x^2/2}\)</span> then depends on the value of <span class="math inline">\(a_0\)</span>.</p>
+<p>In linear algebra, <span class="math inline">\({H_0, H_1, H_2, \cdots}\)</span> form an orthogonal basis, and it has been proved that <span class="math display">\[
+\int_{-\infty}^{\infty} H_i(x)H_j(x)\,e^{-x^2}dx=\sqrt{2\pi}\,n!\,\delta(i, j)
+\]</span> Here <span class="math display">\[
+a_0=\frac{\left&lt;x^n, H_0\right&gt;}{\left&lt;H_0, H_0\right&gt;}=\frac{1}{\sqrt{2\pi}}\int_{-\infty}^{\infty}x^ne^{-x^2/2}dx~~\begin{cases}&gt;0&amp;n~is~even\\
+=0&amp;n~is~odd\end{cases}
+\]</span> So we can say that</p>
+<ul>
+<li>If n is odd, <span class="math inline">\(x^ne^{-x^2/2}\)</span> is intergrable</li>
+<li>Otherwise, if n is even, <span class="math inline">\(x^ne^{-x^2/2}\)</span> is not intergrable</li>
+</ul>
+<h3 id="calculation-of-int_-inftyinfty-e-x2dx">Calculation of <span class="math inline">\(\int_{-\infty}^{\infty} e^{-x^2}dx\)</span></h3>
+<p>Though <span class="math inline">\(H_0e^{-x^2}\)</span> is not intergrable, we can calculate the result of <span class="math inline">\(\int_{-\infty}^{\infty} e^{-x^2}dx\)</span>. Suppose the result to be <span class="math inline">\(I\)</span>. then <span class="math display">\[
+\begin{split}
+I \times I &amp;= \int_{-\infty}^{\infty}{e^{-x^2}\,dx} \times \int_{-\infty}^{\infty}{e^{-y^2}\,dy} \\
+ &amp;= \int_{y=-\infty}^{\infty}\int_{x=-\infty}^{\infty}{e^{-(x^2+y^2)}\,dx\,dy}\\
+ &amp;= \int_{\theta=-\pi}^{\pi}\int_{r=0}^{\infty}re^{-r^2}\,dr\,d\theta \\
+ &amp;= \int_{\theta=-\pi}^{\pi}\left(-\frac{1}{2}e^{-r^2}\right)\bigg|_{r=0}^{\infty}\,d\theta \\
+ &amp;= \int_{\theta=-\pi}^{\pi}{-\frac{1}{2}}\,d\theta \\
+ &amp;= \pi
+\end{split}
+\]</span> Apparently <span class="math inline">\(I &gt; 0\)</span>. Therefore, we have <span class="math inline">\(I = \sqrt{\pi}\)</span></p>
+<h3 id="calculation-of-int_-inftyinftyx2ke-x2dx">Calculation of <span class="math inline">\(\int_{-\infty}^{\infty}{x^{2k}e^{-x^2}dx}\)</span></h3>
+<p>Here we can use integration by parts.</p>
+<p><span class="math display">\[
+\begin{align}
+\int_{-\infty}^{\infty}{x^{2k}e^{-x^2}dx}
+&amp;= -\frac{1}{2}\int_{-\infty}^{\infty}{x^{2k-1}\cdot\left(-2xe^{-x^2}\right)dx}\\
+&amp;= -\frac{1}{2}\left(x^{2k-1}e^{-x^2}\bigg|_{-\infty}^{\infty}-\int_{-\infty}^{\infty}(2k-1)x^{2k-2}e^{-x^2}dx\right)\\
+&amp;= \frac{2k-1}{2}\int_{-\infty}^{\infty}{x^{2k-2}e^{-x^2}dx}\\
+&amp;= \frac{(2k-1)!!}{2^k}\int_{-\infty}^{\infty} e^{-x^2}dx \\
+&amp;= \frac{(2k-1)!!}{2^k}\sqrt{\pi}
+\end{align}
+\]</span> Moreover, <span class="math display">\[
+{\displaystyle \int_{-\infty}^{\infty}{x^{2k}e^{-\frac{(x-a)^2}{2b^2}}dx}=(2k-1)!!\sqrt{2\pi b^{2k}}}
+\]</span></p>
+
+        </div>
+
+        <blockquote class="post-copyright">
+    
+    <div class="content">
+        
+<span class="post-time">
+    最后更新时间：<time datetime="2020-11-17T01:08:35.000Z" itemprop="dateUpdated">11月 17, 2020 09:08</time>
+</span><br>
+
+
+        
+    </div>
+    
+    <footer>
+        <a href="https://ayllenzhang.github.io">
+            <img src="/img/mokuroo.png" alt="Ayllen Zhang">
+            Ayllen Zhang
+        </a>
+    </footer>
+</blockquote>
+
+        
+
+
+        <div class="post-footer">
+            
+	<ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Math/" rel="tag">Math</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Note/" rel="tag">Note</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Probablistic/" rel="tag">Probablistic</a></li></ul>
+
+
+            
+<div class="page-share-wrap">
+    
+
+<div class="page-share" id="pageShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://ayllenzhang.github.io/2019/07/proba-note/&title=《Probability statistics notes》 — Ayllen's Neverland&pic=https://ayllenzhang.github.io/img/mokuroo.png" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://ayllenzhang.github.io/2019/07/proba-note/&title=《Probability statistics notes》 — Ayllen's Neverland&source=Some notes I took down last summer, when I was reviewing statistics and proba..." data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://ayllenzhang.github.io/2019/07/proba-note/" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《Probability statistics notes》 — Ayllen's Neverland&url=https://ayllenzhang.github.io/2019/07/proba-note/&via=https://ayllenzhang.github.io" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://ayllenzhang.github.io/2019/07/proba-note/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+
+    <a href="javascript:;" id="shareFab" class="page-share-fab waves-effect waves-circle">
+        <i class="icon icon-share-alt icon-lg"></i>
+    </a>
+</div>
+
+
+
+        </div>
+    </div>
+
+    
+<nav class="post-nav flex-row flex-justify-between">
+  
+    <div class="waves-block waves-effect prev">
+      <a href="/2019/07/mcmc-notes/" id="post-prev" class="post-nav-link">
+        <div class="tips"><i class="icon icon-angle-left icon-lg icon-pr"></i> Prev</div>
+        <h4 class="title">Notes about MCMC and Sampling</h4>
+      </a>
+    </div>
+  
+
+  
+    <div class="waves-block waves-effect next">
+      <a href="/2019/07/save-manjaro/" id="post-next" class="post-nav-link">
+        <div class="tips">Next <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
+        <h4 class="title">拯救 manjaro</h4>
+      </a>
+    </div>
+  
+</nav>
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+    <!-- Valine Comments -->
+    <div class="comments vcomment v" id="vcomments"></div>
+    <!-- <div class="comment" id="comment"></div> -->
+    <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/valine/dist/Valine.min.js"></script>
+    <!-- <script src="//t1.aixinxi.net/o_1c3n4pim01nl3jg91b6l1kjtkvsa.js"></script> -->
+    <!-- <script src="/js/Valine.min.js"></script> -->
+    <!-- <script src="https://cdnjs.cat.net/ajax/libs/jquery/3.2.1/jquery.min.js"></script> -->
+    <script src="//cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script>
+    <!-- Valine Comments script -->
+    <script>
+        var GUEST_INFO = ['nick','mail','link'];
+        var guest_info = 'nick,mail'.split(',').filter(function(item){
+          return GUEST_INFO.indexOf(item) > -1
+        });
+        new Valine({
+            av: AV,
+            // el: '#comments',
+            el: '#vcomments',
+            emoticon_url: 'https://abelsu7.top/alu', //表情图片网址
+            emoticon_list: ["赞一个.png","坐等.png","长草.png","阴暗.png","邪恶.png","小眼睛.png","想一想.png","献黄瓜.png","献花.png","喜极而泣.png","无语.png","无所谓.png","无奈.png","投降.png","深思.png","期待.png","狂汗.png","蜡烛.png","看不见.png","惊喜.png","击掌.png","欢呼.png","得意.png","不出所料.png","观察.png"],//表情图片文件名
+            // notify: 'false' == 'false',
+            // verify: 'false' == 'false',
+            // notify: 'false',
+            // verify: 'false',
+            notify: false,
+            verify: false,
+            appId: "cFer952Ja6DQ1O1yE5bT2hDU-gzGzoHsz",
+            appKey: "MzfFmkudIEwjkIT0SfkW0fCm",
+            avatar: "mp",
+            placeholder: "Comments are welcome",
+            guest_info: guest_info.length == 0 ? GUEST_INFO : guest_info,
+            pageSize: "10"
+        })
+    </script>
+    <!-- Valine Comments end -->
+
+
+
+
+
+
+
+
+
+    <section class="comments" id="comments">
+        <div id="gitalk-container"></div>
+        <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+        <script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+        <script>
+            var id = location.pathname
+            if (location.pathname.length > 50) {
+              id = location.pathname.replace(/\/\d+\/\d+\/\d+\//, '').replace('/', '').substring(0, 50)
+            }
+            const gitalk = new Gitalk({
+              clientID: '',
+              clientSecret: '',
+              repo: 'yiyayamaya.github.io',
+              owner: 'yiyayamaya',
+              admin: ['yiyayamaya'],
+              id: id,      // Ensure uniqueness and length less than 50
+              title: document.title.split('|')[0],
+              distractionFreeMode: false  // Facebook-like distraction free mode
+            })
+            gitalk.render('gitalk-container')
+        </script>
+    </section>
+
+
+
+</article>
+
+
+
+</div>
+
+        <footer class="footer">
+    <div class="top">
+        
+
+            <p>
+                
+                    <span>
+                        <a href="/atom.xml" target="_blank" class="rss" title="rss">
+                            <i class="icon icon-lg icon-rss"></i>
+                        </a>
+                    </span>
+                    
+                        <span>
+                            博客内容遵循 <a rel="license noopener" target="_blank" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">知识共享 署名 - 非商业性 - 相同方式共享 4.0 国际协议</a>
+                        </span>
+            </p>
+    </div>
+    <div class="bottom">
+        <p>
+            <span>
+                Ayllen Zhang &copy;
+                    
+                        2018 -
+                            
+                                2021
+            </span>
+            <span>
+                
+                    <a href="http://beian.miit.gov.cn/" target="_blank">
+                        京ICP备18044497号-1
+                    </a>
+                    <br>
+                    
+                        Power by
+                        <a href="http://hexo.io/" target="_blank">Hexo</a> Theme
+                        <a href="https://github.com/abelsu7/hexo-theme-indigo-plus" target="_blank">indigo plus</a>
+                        <p>Hosted by <a href="https://pages.github.com" target="_blank" style="font-weight: bold">Github Pages</a></p>
+            </span>
+        </p>
+    </div>
+</footer>
+
+    </main>
+    <div class="mask" id="mask"></div>
+<a href="javascript:;" id="gotop" class="waves-effect waves-circle waves-light"><span class="icon icon-lg icon-chevron-up"></span></a>
+<a href="javascript:;" id="gobottom" class="waves-effect waves-circle waves-light"><span class="icon icon-lg icon-comments"></span></a>
+
+
+
+<div class="global-share" id="globalShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://ayllenzhang.github.io/2019/07/proba-note/&title=《Probability statistics notes》 — Ayllen's Neverland&pic=https://ayllenzhang.github.io/img/mokuroo.png" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://ayllenzhang.github.io/2019/07/proba-note/&title=《Probability statistics notes》 — Ayllen's Neverland&source=Some notes I took down last summer, when I was reviewing statistics and proba..." data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://ayllenzhang.github.io/2019/07/proba-note/" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《Probability statistics notes》 — Ayllen's Neverland&url=https://ayllenzhang.github.io/2019/07/proba-note/&via=https://ayllenzhang.github.io" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://ayllenzhang.github.io/2019/07/proba-note/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+<div class="page-modal wx-share" id="wxShare">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMYAAADGCAAAAACs8KCBAAACLUlEQVR42u3aS47CQAwFwLn/pZntSEB4tslI3V1ZoQiSLhaWfz8/8fV4uv7ef/ed5++/e+a7O1++MDAwlmUkr8/vPx/imt17/gsqBgbGAYx3EawXWPMwmj/nw5kxMDAwgmPNA/f1ZwwMDIyccV2IJjVm9Q4GBgZGNdXrJXw56fZaHAMDY0FG3nX//8+3zDcwMDCWYjyK13y0OT/DizdiYGBszcgD3CSZ68Gq58HAwNiV0Qu1+Wt6d8pvxMDAOIDRKx2rza/eckYUsjEwMLZmJLErOei8cdYbAGBgYJzDqKZ6SQJX/X6+xvGFdhsGBsaCjLzUrK5B5M24XkLZrKExMDAWZFQb9JPQmfwR1SdjYGCcw0ja9NXRYzUEV8tjDAyMExjXzfdeAM2bd/lvoyocAwNja0Zv0DgZD3y3MYeBgbE3Iy9Wq6sS1YDeGzyUa3EMDIwFGflRkrZ+b4WrN8HAwMA4k9Fr/feWUCebay+egIGBsTWjWo7maxYfQmRxSJCHbwwMjF0Zdx+oeqxeAoqBgXECIw+mvfbZPAX8kLBiYGAcw+gtb1VXMXpLHqOVCwwMjGUZj+LVa6vlgTX/I6LYjIGBsQUjv66Tswm4t15W6B1iYGBswagG2SpsEhXzISsGBsYJjPvid5L83VKLY2BgYFwG4uqwM8dHGyIYGBgYxaFmMoZMEsGoiMXAwNiakRSxk0K3mj7e2G7DwMBYkJGXjpOm2OQQ1aU0DAyMjRi/6nqJhziO98wAAAAASUVORK5CYII=" alt="微信分享二维码">
+</div>
+
+
+
+
+    <script src="//cdn.jsdelivr.net/npm/node-waves@0.7.6/src/js/waves.min.js"></script>
+<script>
+var BLOG = { ROOT: '/', SHARE: true, REWARD: false };
+
+
+</script>
+
+<script src="/js/main.min.js?v=1.7.2"></script>
+
+
+<div class="search-panel" id="search-panel">
+    <ul class="search-result" id="search-result"></ul>
+</div>
+<template id="search-tpl">
+<li class="item">
+    <a href="{path}" class="waves-block waves-effect">
+        <div class="title ellipsis" title="{title}">{title}</div>
+        <div class="flex-row flex-middle">
+            <div class="tags ellipsis">
+                {tags}
+            </div>
+            <time class="flex-col time">{date}</time>
+        </div>
+    </a>
+</li>
+</template>
+
+<script src="/js/search.min.js?v=1.7.2" async></script>
+
+
+
+<!-- mathjax config similar to math.stackexchange -->
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+        processEscapes: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    }
+});
+
+MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';
+    }
+});
+</script>
+
+<script async src="//cdn.jsdelivr.net/npm/mathjax@2.7.5/MathJax.js?config=TeX-MML-AM_CHTML" async></script>
+<!-- <script async src="//cdn.bootcss.com/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML" async></script> -->
+<!-- <script async src="//cdn.bootcss.com/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML" async></script> -->
+
+
+
+
+
+
+<script>
+(function() {
+    var OriginTitile = document.title, titleTime;
+    document.addEventListener('visibilitychange', function() {
+        if (document.hidden) {
+            document.title = '...Standby';
+            clearTimeout(titleTime);
+        } else {
+            document.title = 'Neverland';
+            titleTime = setTimeout(function() {
+                document.title = OriginTitile;
+            },2000);
+        }
+    });
+})();
+</script>
+
+
+<script src="/js/prism.min.js?v=1.7.2"></script>
+<script src="/js/prism-vim.min.js?v=1.7.2"></script>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+</body>
+</html>

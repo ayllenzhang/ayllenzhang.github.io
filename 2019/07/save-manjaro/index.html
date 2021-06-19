@@ -1,0 +1,608 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+
+    
+
+    
+
+
+
+    <meta charset="utf-8">
+    
+    
+    
+    <link rel="canonical" href="true/2019/07/save-manjaro/">
+    
+    
+    <title>拯救 manjaro | Ayllen&#39;s Neverland</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <meta name="theme-color" content="#3F51B5">
+    
+    
+    <meta name="keywords" content="Manjaro,ArchLinux">
+    <meta name="description" content="在昨晚的一次 update 并重启以后，Manjaro 忽然黑屏，而我旁边只有一台手机。吓得本 Newbie 当场就在 Manjaro Forum 的 Newbie Corner 发了个帖子。然而发完回应者寥寥（就一个），所提的解决方法也无济于事，于是只好抱着小手机想办法。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="拯救 manjaro">
+<meta property="og:url" content="https://ayllenzhang.github.io/2019/07/save-manjaro/index.html">
+<meta property="og:site_name" content="Ayllen&#39;s Neverland">
+<meta property="og:description" content="在昨晚的一次 update 并重启以后，Manjaro 忽然黑屏，而我旁边只有一台手机。吓得本 Newbie 当场就在 Manjaro Forum 的 Newbie Corner 发了个帖子。然而发完回应者寥寥（就一个），所提的解决方法也无济于事，于是只好抱着小手机想办法。">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2019-07-16T09:27:07.000Z">
+<meta property="article:modified_time" content="2019-07-24T11:24:53.000Z">
+<meta property="article:author" content="Ayllen Zhang">
+<meta property="article:tag" content="Manjaro">
+<meta property="article:tag" content="ArchLinux">
+<meta name="twitter:card" content="summary">
+    
+        <link rel="alternate" type="application/atom+xml" title="Ayllen&#39;s Neverland" href="/atom.xml">
+    
+    <link rel="shortcut icon" href="/img/halfmoon.png">
+    <link rel="stylesheet" href="/css/style.css?v=1.7.2">
+    <link rel="stylesheet" href="/css/prism/prism-tomorrow-night.css?v=1.7.2">
+    <script>window.lazyScripts=[]</script>
+
+    <!-- custom head -->
+    
+
+<!-- hexo injector head_end start -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css">
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hexo-math@4.0.0/dist/style.css">
+<!-- hexo injector head_end end --><meta name="generator" content="Hexo 5.4.0"></head>
+
+<body>
+    <div id="loading" class="active"></div>
+
+    <aside id="menu" class="hide" >
+  <div class="inner flex-row-vertical">
+    <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-off">
+        <i class="icon icon-lg icon-list-ul"></i>
+    </a>
+    <div class="brand-wrap" style="background-image:url(/img/yapam.jpeg)">
+      <div class="brand">
+        <a href="/about" class="avatar waves-effect waves-circle waves-light">
+          <img src="/img/mokuroo.png">
+        </a>
+        <hgroup class="introduce">
+          <h5 class="nickname">Ayllen Zhang</h5>
+          <a href="mailto:ayllenzhang@gmail.com" title="ayllenzhang@gmail.com" class="mail">ayllenzhang@gmail.com</a>
+        </hgroup>
+      </div>
+    </div>
+    <div class="scroll-wrap flex-col">
+      <ul class="nav">
+        
+            <li class="waves-block waves-effect">
+              <a href="/"  >
+                <i class="icon icon-lg icon-home"></i>
+                Home
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/archives"  >
+                <i class="icon icon-lg icon-archives"></i>
+                Archives
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/tags"  >
+                <i class="icon icon-lg icon-tags"></i>
+                Tags
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/categories"  >
+                <i class="icon icon-lg icon-th-list"></i>
+                Categories
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="https://github.com/ayllenzhang" target="_blank" >
+                <i class="icon icon-lg icon-github"></i>
+                Github
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="http://www.weibo.com/u/1934790632" target="_blank" >
+                <i class="icon icon-lg icon-weibo"></i>
+                Weibo
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a target="_blank" rel="noopener" href="http://roosephu.github.io"  >
+                <i class="icon icon-lg icon-link"></i>
+                AFAIK (Roosephu)
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a target="_blank" rel="noopener" href="http://jiaqiguan.net"  >
+                <i class="icon icon-lg icon-link2"></i>
+                Jiaqi&#39;s Homepage
+              </a>
+            </li>
+        
+      </ul>
+    </div>
+  </div>
+</aside>
+
+    <main id="main">
+        <header class="top-header" id="header">
+    <div class="flex-row">
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
+          <i class="icon icon-lg icon-navicon"></i>
+        </a>
+        <div class="flex-col header-title ellipsis">拯救 manjaro</div>
+        
+        <div class="search-wrap" id="search-wrap">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
+                <i class="icon icon-lg icon-chevron-left"></i>
+            </a>
+            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="输入感兴趣的关键字">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="search">
+                <i class="icon icon-lg icon-search"></i>
+            </a>
+        </div>
+        
+        
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menuShare">
+            <i class="icon icon-lg icon-share-alt"></i>
+        </a>
+        
+    </div>
+</header>
+<header class="content-header post-header">
+
+    <div class="container fade-scale">
+        <h1 class="title">拯救 manjaro</h1>
+        <h5 class="subtitle">
+            
+                <time datetime="2019-07-16T09:27:07.000Z" itemprop="datePublished" class="page-time">
+  7月 16, 2019
+</time>
+
+
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/Explore/">探索 / Explore</a></li></ul>
+
+            
+        </h5>
+    </div>
+
+    
+
+
+</header>
+
+
+<div class="container body-wrap">
+    
+
+<article id="post-save-manjaro"
+  class="post-article article-type-post fade" itemprop="blogPost">
+
+    <div class="post-card">
+        <h1 class="post-card-title">拯救 manjaro</h1>
+        <div class="post-meta">
+            <time class="post-time" title="7月 16, 2019 17:27" datetime="2019-07-16T09:27:07.000Z"  itemprop="datePublished">7月 16, 2019</time>
+
+            
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/Explore/">探索 / Explore</a></li></ul>
+
+
+
+            
+
+            
+        </div>
+        <div class="post-content" id="post-content" itemprop="postContent">
+            <p>在昨晚的一次 <code>update</code> 并重启以后，Manjaro 忽然黑屏，而我旁边只有一台手机。吓得本 Newbie 当场就在 Manjaro Forum 的 <a target="_blank" rel="noopener" href="https://forum.manjaro.org/c/newbies">Newbie Corner</a> 发了个<a target="_blank" rel="noopener" href="https://forum.manjaro.org/t/18-04-gnome-black-screen-with-only-underscore-after-update-no-tty/94876">帖子</a>。然而发完回应者寥寥（就一个），所提的解决方法也无济于事，于是只好抱着小手机想办法。</p>
+<p><escape><span id="more"></span></escape></p>
+<p>情况是这样的，在显示完系统选择界面，进入 Loading 环节时，屏幕上依次列出了四行信息</p>
+<pre class="text"><code>Loading Linux 5.0-rt-x86_64 ...
+Loading initial ramdisk ...
+mount: /sys/firmware/efi/efivars: unknown filesystem # 注：本报错此前就有
+Starting version 242.32-3-arch</code></pre>
+<p>然后屏幕就定格在了黑屏，乌漆抹黑，只有左上角有一个凝固的下划线。我本来以为是更新后的初始化，结果吃了个饭回来发现还是这样，当时就惊了。更严重的是，甚至无法通过 <code>Ctrl+Alt+Fx</code> 进入 <code>tty</code> 。强制关机吧。按下关机键这个下划线还闪了两下，调皮。</p>
+<p>玩笑归玩笑，事情还是要解决。第一个问题是如何进去。如果当时我有 MacBook Pro 在旁边的话有个很方便的解决办法，那就是 <a target="_blank" rel="noopener" href="https://forum.manjaro.org/t/how-to-save-your-manjaro-installation-when-it-breaks/75">chroot</a> ，具体实现方法是制作一个 Manjaro 启动盘，在启动盘系统加载好后把原硬盘中的分区mount到系统，再用<code>chroot</code>偷天换月，然后你就可以在这个临时系统里对原系统做调整了。</p>
+<p>但是没有，怎么办呢？我首先参考了<a target="_blank" rel="noopener" href="https://www.ostechnix.com/restore-broken-arch-linux-previous-working-state/">这个网页</a>，通过在 <code>grub</code> 文件中 <code>linux</code> 为首的一行行末插入</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="va">init=</span>/bin/bash</span></code></pre></div>
+<p>从而混入了系统。</p>
+<p>但这还远远没完，进来之后发现系统仅挂在了 <code>/</code> 一个挂载点，同时网络也无法链接，测试证明网卡也未加载。在多次试验后，我写了这么一个脚本，在每次进系统后自动完成一系列配置操作。</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co">#!/bin/sh</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="co"># 挂载各分区</span></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="co"># lsblk -f # 显示分区情况</span></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a><span class="fu">mount</span> /dev/sdb3 /boot</span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a><span class="fu">mount</span> /dev/sdb2 /boot/efi</span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a><span class="fu">mount</span> /dev/sdb5 /home</span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a><span class="fu">mount</span> /dev/sda1 /home/Downloads</span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a><span class="co"># 配置网卡</span></span>
+<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a><span class="co"># lspci -v | grep Ethernet -8 # 寻找网卡模块名称，Ethernet 下 Kernal Module 后面的就是了</span></span>
+<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a><span class="ex">modprobe</span> e1000e # 这里我的 Module 是 e1000e</span>
+<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a><span class="ex">ip</span> link # 查看网卡名，其中不带 LOOPBACK 的那个是对的</span>
+<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a><span class="ex">ip</span> link set eth0 up # 启用网卡</span>
+<span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a><span class="ex">dhcpcd</span> eth0 # 自动分配地址，如果失败要先 killall dhcpcd</span>
+<span id="cb3-16"><a href="#cb3-16" aria-hidden="true" tabindex="-1"></a><span class="co"># ping www.baidu.com -c 5 # 这个界面不加 -c 居然 Ctrl+C 停不了，第一次配完又被迫重启了...</span></span></code></pre></div>
+<p>如此这般，看似简单，其实查了 N 个网页才查清楚上面一系列操作怎么完成。有人要说了，为什么要联网呢？因为是更新完出了错，首先要做的肯定是回滚更新。</p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">cat</span> /var/log/pacman.log <span class="kw">|</span> <span class="fu">grep</span> <span class="st">&quot;2019-07-15&quot;</span> <span class="kw">|</span> <span class="fu">grep</span> -iE <span class="st">&#39;installed|upgraded|removed&#39;</span></span></code></pre></div>
+<p>这样就能具体看到今天 <code>pacman</code> 安装、升级、移除的包。通过 <code>grep</code> 的小技巧可以轻松回滚。</p>
+<p>回滚完了以后系统依然无法进入，怀疑是更新导致了系统关键文件错误。由于在一开始的界面是可以更换 <code>Linux</code> 内核尝试启动的，而我尝试过后并没有效果，所以最初就排除了内核错误。而实验室的核显电脑自然也不会是因为显卡黑屏（尽管如此我还是尝试了重装驱动，无效）。所以最后能做的只有一点点翻看系统日志了。</p>
+<div class="sourceCode" id="cb5"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="ex">journalctl</span> -x -b -1 <span class="kw">|</span> <span class="fu">grep</span> -iE <span class="st">&#39;fail|error|unable&#39;</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="co"># -x for more information, -b -1 for the last boot</span></span></code></pre></div>
+<p>然后翻到这么两行</p>
+<pre class="log"><code>Jul 15 22:53:25 manjaro /usr/lib/gdm-x-session[540]: /usr/lib/Xorg: error while loading shared libraries: libnettle.so.6: cannot open shared object file: No such file or directory
+Jul 15 22:53:25 manjaro /usr/lib/gdm-x-session[540]: Unable to run X server</code></pre>
+<p>这其实就很明显了。<code>X server</code> 是 Gnome 等一堆桌面环境的基础，没运行起来肯定进不了图形界面，于是搜索解决办法。解决方案非常简单，重装 <code>nettle</code> 包就行了。重装后执行</p>
+<div class="sourceCode" id="cb7"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="bu">exec</span> /sbin/init</span></code></pre></div>
+<p>轻松进入图形界面，收工。</p>
+
+        </div>
+
+        <blockquote class="post-copyright">
+    
+    <div class="content">
+        
+<span class="post-time">
+    最后更新时间：<time datetime="2019-07-24T11:24:53.000Z" itemprop="dateUpdated">7月 24, 2019 19:24</time>
+</span><br>
+
+
+        
+    </div>
+    
+    <footer>
+        <a href="https://ayllenzhang.github.io">
+            <img src="/img/mokuroo.png" alt="Ayllen Zhang">
+            Ayllen Zhang
+        </a>
+    </footer>
+</blockquote>
+
+        
+
+
+        <div class="post-footer">
+            
+	<ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ArchLinux/" rel="tag">ArchLinux</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Manjaro/" rel="tag">Manjaro</a></li></ul>
+
+
+            
+<div class="page-share-wrap">
+    
+
+<div class="page-share" id="pageShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://ayllenzhang.github.io/2019/07/save-manjaro/&title=《拯救 manjaro》 — Ayllen's Neverland&pic=https://ayllenzhang.github.io/img/mokuroo.png" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://ayllenzhang.github.io/2019/07/save-manjaro/&title=《拯救 manjaro》 — Ayllen's Neverland&source=在昨晚的一次 update 并重启以后，Manjaro 忽然黑屏，而我旁边只有一台手机。吓得本 Newbie 当场就在 Manjaro Forum 的 N..." data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://ayllenzhang.github.io/2019/07/save-manjaro/" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《拯救 manjaro》 — Ayllen's Neverland&url=https://ayllenzhang.github.io/2019/07/save-manjaro/&via=https://ayllenzhang.github.io" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://ayllenzhang.github.io/2019/07/save-manjaro/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+
+    <a href="javascript:;" id="shareFab" class="page-share-fab waves-effect waves-circle">
+        <i class="icon icon-share-alt icon-lg"></i>
+    </a>
+</div>
+
+
+
+        </div>
+    </div>
+
+    
+<nav class="post-nav flex-row flex-justify-between">
+  
+    <div class="waves-block waves-effect prev">
+      <a href="/2019/07/proba-note/" id="post-prev" class="post-nav-link">
+        <div class="tips"><i class="icon icon-angle-left icon-lg icon-pr"></i> Prev</div>
+        <h4 class="title">Probability statistics notes</h4>
+      </a>
+    </div>
+  
+
+  
+    <div class="waves-block waves-effect next">
+      <a href="/2019/06/manjaro-install/" id="post-next" class="post-nav-link">
+        <div class="tips">Next <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
+        <h4 class="title">Manjaro 装机二三事</h4>
+      </a>
+    </div>
+  
+</nav>
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+    <!-- Valine Comments -->
+    <div class="comments vcomment v" id="vcomments"></div>
+    <!-- <div class="comment" id="comment"></div> -->
+    <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/valine/dist/Valine.min.js"></script>
+    <!-- <script src="//t1.aixinxi.net/o_1c3n4pim01nl3jg91b6l1kjtkvsa.js"></script> -->
+    <!-- <script src="/js/Valine.min.js"></script> -->
+    <!-- <script src="https://cdnjs.cat.net/ajax/libs/jquery/3.2.1/jquery.min.js"></script> -->
+    <script src="//cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script>
+    <!-- Valine Comments script -->
+    <script>
+        var GUEST_INFO = ['nick','mail','link'];
+        var guest_info = 'nick,mail'.split(',').filter(function(item){
+          return GUEST_INFO.indexOf(item) > -1
+        });
+        new Valine({
+            av: AV,
+            // el: '#comments',
+            el: '#vcomments',
+            emoticon_url: 'https://abelsu7.top/alu', //表情图片网址
+            emoticon_list: ["赞一个.png","坐等.png","长草.png","阴暗.png","邪恶.png","小眼睛.png","想一想.png","献黄瓜.png","献花.png","喜极而泣.png","无语.png","无所谓.png","无奈.png","投降.png","深思.png","期待.png","狂汗.png","蜡烛.png","看不见.png","惊喜.png","击掌.png","欢呼.png","得意.png","不出所料.png","观察.png"],//表情图片文件名
+            // notify: 'false' == 'false',
+            // verify: 'false' == 'false',
+            // notify: 'false',
+            // verify: 'false',
+            notify: false,
+            verify: false,
+            appId: "cFer952Ja6DQ1O1yE5bT2hDU-gzGzoHsz",
+            appKey: "MzfFmkudIEwjkIT0SfkW0fCm",
+            avatar: "mp",
+            placeholder: "Comments are welcome",
+            guest_info: guest_info.length == 0 ? GUEST_INFO : guest_info,
+            pageSize: "10"
+        })
+    </script>
+    <!-- Valine Comments end -->
+
+
+
+
+
+
+
+
+
+    <section class="comments" id="comments">
+        <div id="gitalk-container"></div>
+        <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+        <script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+        <script>
+            var id = location.pathname
+            if (location.pathname.length > 50) {
+              id = location.pathname.replace(/\/\d+\/\d+\/\d+\//, '').replace('/', '').substring(0, 50)
+            }
+            const gitalk = new Gitalk({
+              clientID: '',
+              clientSecret: '',
+              repo: 'yiyayamaya.github.io',
+              owner: 'yiyayamaya',
+              admin: ['yiyayamaya'],
+              id: id,      // Ensure uniqueness and length less than 50
+              title: document.title.split('|')[0],
+              distractionFreeMode: false  // Facebook-like distraction free mode
+            })
+            gitalk.render('gitalk-container')
+        </script>
+    </section>
+
+
+
+</article>
+
+
+
+</div>
+
+        <footer class="footer">
+    <div class="top">
+        
+
+            <p>
+                
+                    <span>
+                        <a href="/atom.xml" target="_blank" class="rss" title="rss">
+                            <i class="icon icon-lg icon-rss"></i>
+                        </a>
+                    </span>
+                    
+                        <span>
+                            博客内容遵循 <a rel="license noopener" target="_blank" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">知识共享 署名 - 非商业性 - 相同方式共享 4.0 国际协议</a>
+                        </span>
+            </p>
+    </div>
+    <div class="bottom">
+        <p>
+            <span>
+                Ayllen Zhang &copy;
+                    
+                        2018 -
+                            
+                                2021
+            </span>
+            <span>
+                
+                    <a href="http://beian.miit.gov.cn/" target="_blank">
+                        京ICP备18044497号-1
+                    </a>
+                    <br>
+                    
+                        Power by
+                        <a href="http://hexo.io/" target="_blank">Hexo</a> Theme
+                        <a href="https://github.com/abelsu7/hexo-theme-indigo-plus" target="_blank">indigo plus</a>
+                        <p>Hosted by <a href="https://pages.github.com" target="_blank" style="font-weight: bold">Github Pages</a></p>
+            </span>
+        </p>
+    </div>
+</footer>
+
+    </main>
+    <div class="mask" id="mask"></div>
+<a href="javascript:;" id="gotop" class="waves-effect waves-circle waves-light"><span class="icon icon-lg icon-chevron-up"></span></a>
+<a href="javascript:;" id="gobottom" class="waves-effect waves-circle waves-light"><span class="icon icon-lg icon-comments"></span></a>
+
+
+
+<div class="global-share" id="globalShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://ayllenzhang.github.io/2019/07/save-manjaro/&title=《拯救 manjaro》 — Ayllen's Neverland&pic=https://ayllenzhang.github.io/img/mokuroo.png" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://ayllenzhang.github.io/2019/07/save-manjaro/&title=《拯救 manjaro》 — Ayllen's Neverland&source=在昨晚的一次 update 并重启以后，Manjaro 忽然黑屏，而我旁边只有一台手机。吓得本 Newbie 当场就在 Manjaro Forum 的 N..." data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://ayllenzhang.github.io/2019/07/save-manjaro/" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《拯救 manjaro》 — Ayllen's Neverland&url=https://ayllenzhang.github.io/2019/07/save-manjaro/&via=https://ayllenzhang.github.io" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://ayllenzhang.github.io/2019/07/save-manjaro/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+<div class="page-modal wx-share" id="wxShare">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMYAAADGCAAAAACs8KCBAAACKklEQVR42u3aUY6DMAxFUfa/aboARHqfk1aKc/kaMZTk8GHZjq8LX/fjGv93/Pzzt8/3XL+4ZMiQsS2DLJ8Cxhvlbwg+jQwZMg5gkFCYLs/DKHnPlz3LkCFDRolEAmi6lgwZMmRwBlnsjZrekSFDhgweKNHrwvYcCcSLa3EZMmRsyOBd9////ZPzDRkyZGzFuMOLHz3ydts9fcmQIaM3Y74EHW96BpbuR4YMGScw+LZIiTtzhzxZ/NIyZMjYkFFrY9XaXrXhDBSyZciQ0ZpB0jLe1q81znipHCSRMmTIaMdYlfClwxlki2QETYYMGTLSTXBAOiiG0kEZMmS0Y5BN88ELkkqmW0Q7kSFDxmGMWoNsVQqYpp4yZMg4jZEWq7WFU15QvsqQIaMpgyRhabGahmbC4welMmTI6M3gxSpp2fPDzhomGPWQIUPG5gxeuI7D7swIFw/Tr59MhgwZxzB4JCbU9H6aksqQIeMcxkwRWwusKSbObWXIkNGUURtxmAm4/G384EGGDBnnMEi7PygvSx+FHDYUu4MyZMjYnEFaZuQAoNaA44eUXyZHZMiQ0Y5xhxdfkv9qJq0MsksZMmRsy0hnq+YLTl7W1gY+ZMiQ0ZWxKsiOw+jMJ0PHFTJkyDiAkbbh+HbHyd/iWlyGDBkywmdWhV1ElSFDhoxSi40cRvJEEBWxMmTIaM3gi/HwWhsOIyvKkCHjNAZP1GoFJwm74xyPlNMyZMhoyvgAzYbRP1+qrD8AAAAASUVORK5CYII=" alt="微信分享二维码">
+</div>
+
+
+
+
+    <script src="//cdn.jsdelivr.net/npm/node-waves@0.7.6/src/js/waves.min.js"></script>
+<script>
+var BLOG = { ROOT: '/', SHARE: true, REWARD: false };
+
+
+</script>
+
+<script src="/js/main.min.js?v=1.7.2"></script>
+
+
+<div class="search-panel" id="search-panel">
+    <ul class="search-result" id="search-result"></ul>
+</div>
+<template id="search-tpl">
+<li class="item">
+    <a href="{path}" class="waves-block waves-effect">
+        <div class="title ellipsis" title="{title}">{title}</div>
+        <div class="flex-row flex-middle">
+            <div class="tags ellipsis">
+                {tags}
+            </div>
+            <time class="flex-col time">{date}</time>
+        </div>
+    </a>
+</li>
+</template>
+
+<script src="/js/search.min.js?v=1.7.2" async></script>
+
+
+
+
+
+
+
+
+<script>
+(function() {
+    var OriginTitile = document.title, titleTime;
+    document.addEventListener('visibilitychange', function() {
+        if (document.hidden) {
+            document.title = '...Standby';
+            clearTimeout(titleTime);
+        } else {
+            document.title = 'Neverland';
+            titleTime = setTimeout(function() {
+                document.title = OriginTitile;
+            },2000);
+        }
+    });
+})();
+</script>
+
+
+<script src="/js/prism.min.js?v=1.7.2"></script>
+<script src="/js/prism-vim.min.js?v=1.7.2"></script>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+</body>
+</html>

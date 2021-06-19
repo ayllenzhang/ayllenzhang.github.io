@@ -1,0 +1,712 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+
+    
+
+    
+
+
+
+    <meta charset="utf-8">
+    
+    
+    
+    <link rel="canonical" href="true/2019/06/manjaro-install/">
+    
+    
+    <title>Manjaro 装机二三事 | Ayllen&#39;s Neverland</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <meta name="theme-color" content="#3F51B5">
+    
+    
+    <meta name="keywords" content="manjaro,linux,installation">
+    <meta name="description" content="作为当前 DistroWatch 上排名第二的 Linux 发行版，基于 ArchLinux 的 Manjaro 在共享前者的 AUR 仓库，Wiki 及社区的同时，大大简化了 ArchLinux 的上手难度。他提供丰富的图形化界面选择，自动安装驱动，且拥有专用的软件仓库，是 Linux 初学者及进阶使用者的不二选择。 网上已经有很多的 Manjaro 装机报告了，我在此加以总结，并补充上我自己">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Manjaro 装机二三事">
+<meta property="og:url" content="https://ayllenzhang.github.io/2019/06/manjaro-install/index.html">
+<meta property="og:site_name" content="Ayllen&#39;s Neverland">
+<meta property="og:description" content="作为当前 DistroWatch 上排名第二的 Linux 发行版，基于 ArchLinux 的 Manjaro 在共享前者的 AUR 仓库，Wiki 及社区的同时，大大简化了 ArchLinux 的上手难度。他提供丰富的图形化界面选择，自动安装驱动，且拥有专用的软件仓库，是 Linux 初学者及进阶使用者的不二选择。 网上已经有很多的 Manjaro 装机报告了，我在此加以总结，并补充上我自己">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2019-06-24T05:31:08.000Z">
+<meta property="article:modified_time" content="2019-07-24T11:24:53.000Z">
+<meta property="article:author" content="Ayllen Zhang">
+<meta property="article:tag" content="manjaro">
+<meta property="article:tag" content="linux">
+<meta property="article:tag" content="installation">
+<meta name="twitter:card" content="summary">
+    
+        <link rel="alternate" type="application/atom+xml" title="Ayllen&#39;s Neverland" href="/atom.xml">
+    
+    <link rel="shortcut icon" href="/img/halfmoon.png">
+    <link rel="stylesheet" href="/css/style.css?v=1.7.2">
+    <link rel="stylesheet" href="/css/prism/prism-tomorrow-night.css?v=1.7.2">
+    <script>window.lazyScripts=[]</script>
+
+    <!-- custom head -->
+    
+
+<!-- hexo injector head_end start -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css">
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hexo-math@4.0.0/dist/style.css">
+<!-- hexo injector head_end end --><meta name="generator" content="Hexo 5.4.0"></head>
+
+<body>
+    <div id="loading" class="active"></div>
+
+    <aside id="menu" class="hide" >
+  <div class="inner flex-row-vertical">
+    <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-off">
+        <i class="icon icon-lg icon-list-ul"></i>
+    </a>
+    <div class="brand-wrap" style="background-image:url(/img/yapam.jpeg)">
+      <div class="brand">
+        <a href="/about" class="avatar waves-effect waves-circle waves-light">
+          <img src="/img/mokuroo.png">
+        </a>
+        <hgroup class="introduce">
+          <h5 class="nickname">Ayllen Zhang</h5>
+          <a href="mailto:ayllenzhang@gmail.com" title="ayllenzhang@gmail.com" class="mail">ayllenzhang@gmail.com</a>
+        </hgroup>
+      </div>
+    </div>
+    <div class="scroll-wrap flex-col">
+      <ul class="nav">
+        
+            <li class="waves-block waves-effect">
+              <a href="/"  >
+                <i class="icon icon-lg icon-home"></i>
+                Home
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/archives"  >
+                <i class="icon icon-lg icon-archives"></i>
+                Archives
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/tags"  >
+                <i class="icon icon-lg icon-tags"></i>
+                Tags
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/categories"  >
+                <i class="icon icon-lg icon-th-list"></i>
+                Categories
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="https://github.com/ayllenzhang" target="_blank" >
+                <i class="icon icon-lg icon-github"></i>
+                Github
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="http://www.weibo.com/u/1934790632" target="_blank" >
+                <i class="icon icon-lg icon-weibo"></i>
+                Weibo
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a target="_blank" rel="noopener" href="http://roosephu.github.io"  >
+                <i class="icon icon-lg icon-link"></i>
+                AFAIK (Roosephu)
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a target="_blank" rel="noopener" href="http://jiaqiguan.net"  >
+                <i class="icon icon-lg icon-link2"></i>
+                Jiaqi&#39;s Homepage
+              </a>
+            </li>
+        
+      </ul>
+    </div>
+  </div>
+</aside>
+
+    <main id="main">
+        <header class="top-header" id="header">
+    <div class="flex-row">
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
+          <i class="icon icon-lg icon-navicon"></i>
+        </a>
+        <div class="flex-col header-title ellipsis">Manjaro 装机二三事</div>
+        
+        <div class="search-wrap" id="search-wrap">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
+                <i class="icon icon-lg icon-chevron-left"></i>
+            </a>
+            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="输入感兴趣的关键字">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="search">
+                <i class="icon icon-lg icon-search"></i>
+            </a>
+        </div>
+        
+        
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menuShare">
+            <i class="icon icon-lg icon-share-alt"></i>
+        </a>
+        
+    </div>
+</header>
+<header class="content-header post-header">
+
+    <div class="container fade-scale">
+        <h1 class="title">Manjaro 装机二三事</h1>
+        <h5 class="subtitle">
+            
+                <time datetime="2019-06-24T05:31:08.000Z" itemprop="datePublished" class="page-time">
+  6月 24, 2019
+</time>
+
+
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/Explore/">探索 / Explore</a></li></ul>
+
+            
+        </h5>
+    </div>
+
+    
+
+
+</header>
+
+
+<div class="container body-wrap">
+    
+    <aside class="post-widget">
+        <nav class="post-toc-wrap post-toc-shrink" id="post-toc">
+            <h4>TOC</h4>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#manjaro-%E7%9A%84%E5%AE%89%E8%A3%85"><span class="post-toc-text">Manjaro 的安装</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#%E9%95%9C%E5%83%8F%E4%B8%8B%E8%BD%BD"><span class="post-toc-text">镜像下载</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#%E5%90%AF%E5%8A%A8%E7%9B%98%E5%88%B6%E4%BD%9C%E5%B7%A5%E5%85%B7"><span class="post-toc-text">启动盘制作工具</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#%E5%AE%89%E8%A3%85%E8%BF%87%E7%A8%8B"><span class="post-toc-text">安装过程</span></a></li></ol></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#manjaro-%E7%B3%BB%E7%BB%9F%E9%85%8D%E7%BD%AE"><span class="post-toc-text">Manjaro 系统配置</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#%E6%9B%BF%E6%8D%A2%E5%9B%BD%E5%86%85%E6%BA%90"><span class="post-toc-text">替换国内源</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#%E5%AE%89%E8%A3%85-yay-%E5%B9%B6%E9%85%8D%E7%BD%AE"><span class="post-toc-text">安装 yay 并配置</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#%E5%AE%89%E8%A3%85%E8%BE%93%E5%85%A5%E6%B3%95"><span class="post-toc-text">安装输入法</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#%E5%AE%89%E8%A3%85-git-%E5%B9%B6%E9%85%8D%E7%BD%AE-ssh"><span class="post-toc-text">安装 Git 并配置 ssh</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#%E5%85%B6%E4%BB%96%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85"><span class="post-toc-text">其他软件安装</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#%E5%AE%89%E8%A3%85-chrome-%E5%8F%8A-node.js"><span class="post-toc-text">安装 Chrome 及 node.js</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#%E5%AE%89%E8%A3%85%E6%88%AA%E5%9B%BE%E8%BD%AF%E4%BB%B6-deepin-screenshot"><span class="post-toc-text">安装截图软件 deepin-screenshot</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#%E5%AE%89%E8%A3%85-vscode"><span class="post-toc-text">安装 VSCode</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#%E5%AE%89%E8%A3%85-qqtim-%E5%92%8C-wechat"><span class="post-toc-text">安装 QQ，TIM 和 WeChat</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#%E5%AE%89%E8%A3%85-%E7%A6%8F%E6%98%95%E9%98%85%E8%AF%BB%E5%99%A8%E7%BD%91%E6%98%93%E4%BA%91smplayergoldendict"><span class="post-toc-text">安装 福昕阅读器，网易云，smplayer，goldendict</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#%E9%80%89%E8%A3%85typora%E4%B8%80%E6%AC%BE%E8%BD%BB%E4%BE%BF%E5%A5%BD%E7%94%A8%E7%9A%84-markdown-%E7%BC%96%E8%BE%91%E5%99%A8%E6%94%AF%E6%8C%81%E6%89%80%E8%A7%81%E5%8D%B3%E6%89%80%E5%BE%97%E6%88%91%E7%94%A8%E8%BF%99%E4%B8%AA%E5%86%99%E7%9A%84%E5%8D%9A%E5%AE%A2"><span class="post-toc-text">（选装）Typora：一款轻便好用的 markdown 编辑器，支持所见即所得（我用这个写的博客）</span></a></li></ol></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#%E5%AE%89%E8%A3%85%E5%AD%97%E4%BD%93"><span class="post-toc-text">安装字体</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#%E5%AE%89%E8%A3%85-ss-ssr"><span class="post-toc-text">安装 SS &#x2F; SSR</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#ss-%E5%AE%89%E8%A3%85"><span class="post-toc-text">SS 安装</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#ssr-%E5%AE%89%E8%A3%85"><span class="post-toc-text">SSR 安装</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#tweaks-%E5%AE%89%E8%A3%85"><span class="post-toc-text">Tweaks 安装</span></a></li></ol></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#%E5%85%B6%E4%BB%96%E9%85%8D%E7%BD%AE"><span class="post-toc-text">其他配置</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#%E9%85%8D%E7%BD%AE%E5%BF%AB%E6%8D%B7%E9%94%AE"><span class="post-toc-text">配置快捷键</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#%E6%96%87%E4%BB%B6%E5%A4%B9%E9%BB%98%E8%AE%A4%E6%89%93%E5%BC%80%E6%96%B9%E5%BC%8F%E5%87%BA%E9%94%99%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95%E4%BE%8B%E5%A6%82%E9%BB%98%E8%AE%A4%E6%96%87%E4%BB%B6%E5%A4%B9%E6%89%93%E5%BC%80%E6%96%B9%E5%BC%8F%E5%8F%98%E4%B8%BAvscode"><span class="post-toc-text">文件夹默认打开方式出错解决方法（例如默认文件夹打开方式变为VSCode）</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#%E9%85%8D%E7%BD%AE%E4%B8%BB%E9%A2%98%E5%90%8E%E6%8A%A5%E9%94%99-gtk-warning-...-theme-parsing-error"><span class="post-toc-text">配置主题后报错 Gtk-WARNING **: ... :Theme parsing error</span></a></li></ol></li></ol></li></ol></li></ol>
+        </nav>
+    </aside>
+
+
+<article id="post-manjaro-install"
+  class="post-article article-type-post fade" itemprop="blogPost">
+
+    <div class="post-card">
+        <h1 class="post-card-title">Manjaro 装机二三事</h1>
+        <div class="post-meta">
+            <time class="post-time" title="6月 24, 2019 13:31" datetime="2019-06-24T05:31:08.000Z"  itemprop="datePublished">6月 24, 2019</time>
+
+            
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/Explore/">探索 / Explore</a></li></ul>
+
+
+
+            
+
+            
+        </div>
+        <div class="post-content" id="post-content" itemprop="postContent">
+            <p>作为当前 <a target="_blank" rel="noopener" href="https://distrowatch.com/">DistroWatch</a> 上排名第二的 Linux 发行版，基于 ArchLinux 的 Manjaro 在共享前者的 AUR 仓库，Wiki 及社区的同时，大大简化了 ArchLinux 的上手难度。他提供丰富的图形化界面选择，自动安装驱动，且拥有专用的软件仓库，是 Linux 初学者及进阶使用者的不二选择。</p>
+<p>网上已经有很多的 Manjaro 装机报告了，我在此加以总结，并补充上我自己遇上的一些 bug 以及解决方案。</p>
+<p><escape><span id="more"></span></escape></p>
+<h1 id="manjaro-的安装">Manjaro 的安装</h1>
+<h3 id="镜像下载">镜像下载</h3>
+<ul>
+<li>下载地址：https://manjaro.org/download/</li>
+<li>选择 Official（官方发行）目录下或 Community（社区发行）目录下的发行版均可</li>
+<li>推荐初学者使用 GNOME 或 Deepin（简单易用），进阶使用者使用 KDE （美观）</li>
+</ul>
+<h3 id="启动盘制作工具">启动盘制作工具</h3>
+<ul>
+<li><p>macOS 推荐使用 <a target="_blank" rel="noopener" href="https://www.balena.io/etcher/">Etcher</a></p></li>
+<li><p>Windows 推荐使用 <a target="_blank" rel="noopener" href="https://rufus.ie/">Rufus</a></p></li>
+</ul>
+<p>这两个都是一键配置，不像 UltraISO 有很多参数需要调。</p>
+<h3 id="安装过程">安装过程</h3>
+<p>注意：双系统安装需要提前分区，请参考<a target="_blank" rel="noopener" href="https://blog.csdn.net/lj402159806/article/details/80218360">这个网页</a>。</p>
+<p>一个小 Trick 是：如果你有双硬盘，建议将 <code>~/Downloads</code> 挂在机械硬盘上，然后利用 <code>ln -s</code> 建立软连接。例如，将 <code>Documents</code> 文件夹放在 <code>~/Downloads</code> 下，但通过 <code>ln -s</code> 连接到主文件夹中。这样，<code>Documents</code> 就不会占用固态硬盘的空间，而我们仍可以通过 <code>~/Documents</code> 直接访问该文件夹。</p>
+<p>装机过程请参考<a target="_blank" rel="noopener" href="https://zzycreate.github.io/2018/11/03/Manjaro的尝试/">这个网页</a>。（很有缘，博客作者和我用的同一套 Hexo 主题，只是我调了颜色）</p>
+<h1 id="manjaro-系统配置">Manjaro 系统配置</h1>
+<h3 id="替换国内源">替换国内源</h3>
+<p>系统配置的第一步当然是配置软件源</p>
+<p>在终端输入</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> nano /etc/pacman.d/mirrorlist</span></code></pre></div>
+<p>在该文件顶端添加</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode json"><code class="sourceCode json"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="er">Server</span> <span class="er">=</span> <span class="er">https://mirrors.tuna.tsinghua.edu.cn/archlinux/$repo/os/$arch</span></span></code></pre></div>
+<p>然后 <code>Ctrl+O</code> 写入，<code>Ctrl+X</code> 退出。</p>
+<p>再次在终端输入</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a> <span class="fu">sudo</span> nano /etc/pacman.conf</span></code></pre></div>
+<p>在文件末端加上</p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode json"><code class="sourceCode json"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="ot">[</span><span class="er">archlinuxcn</span><span class="ot">]</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="er">Server</span> <span class="er">=</span> <span class="er">https://mirrors.tuna.tsinghua.edu.cn/archlinuxcn/$arch</span></span></code></pre></div>
+<p>同理保存退出</p>
+<p>终端输入如下指令更新软件源：</p>
+<div class="sourceCode" id="cb5"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> pacman -Syy <span class="kw">&amp;&amp;</span> <span class="fu">sudo</span> pacman -S archlinuxcn-keyring</span></code></pre></div>
+<h3 id="安装-yay-并配置">安装 <code>yay</code> 并配置</h3>
+<p>安装方式：终端输入如下代码</p>
+<div class="sourceCode" id="cb6"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> clone https://aur.archlinux.org/yay.git</span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> yay</span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a><span class="ex">makepkg</span> -si</span></code></pre></div>
+<p>同样，将软件源修改为清华源提速：</p>
+<div class="sourceCode" id="cb7"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="ex">yay</span> --aururl <span class="st">&quot;https://aur.tuna.tsinghua.edu.cn&quot;</span> --save</span></code></pre></div>
+<h3 id="安装输入法">安装输入法</h3>
+<p><del>此处采用<code>fcitx + sogoupinyin</code> 的安装方案</del></p>
+<p><code>sogoupinyin</code>实在是 bug 太多了，换用<code>fcitx + cloudpinyin</code> 的安装方案</p>
+<div class="sourceCode" id="cb8"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> pacman -S fcitx-im fcitx-configtool</span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> pacman -S fcitx-gtk2 fcitx-gtk3 fcitx-qt4 fcitx-qt5 <span class="co"># 都装全少点问题</span></span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> pacman -S fcitx-googlepinyin fcitx-cloudpinyin</span></code></pre></div>
+<p>编辑 ~/.xprofile 和 /etc/profile，加入（两个文件都要加入）</p>
+<div class="sourceCode" id="cb9"><pre class="sourceCode json"><code class="sourceCode json"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="er">export</span> <span class="er">GTK_IM_MODULE=fcitx</span></span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a><span class="er">export</span> <span class="er">QT_IM_MODULE=fcitx</span></span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a><span class="er">export</span> <span class="er">XMODIFIERS=&quot;@im=fcitx&quot;</span></span></code></pre></div>
+<p>如果依然无法使用，在 <code>~/.profile</code> 也加一份，并在 <code>~/.xinitrc</code> 中加入 <code>fcitx &amp;</code>。</p>
+<p>其他解决方法参考 <a target="_blank" rel="noopener" href="https://forum.ubuntu.org.cn/viewtopic.php?t=480390">here</a></p>
+<h3 id="安装-git-并配置-ssh">安装 Git 并配置 ssh</h3>
+<div class="sourceCode" id="cb10"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> pacman -S git</span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> config --global user.name <span class="op">&lt;</span>your_name<span class="op">&gt;</span></span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> config --global user.email <span class="op">&lt;</span>your_email<span class="op">&gt;</span></span>
+<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> ~/.ssh</span>
+<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a><span class="fu">ssh-keygen</span> -t rsa -C <span class="st">&quot;&lt;your_email&gt;&quot;</span> <span class="co"># 然后回车两次，如果不需要 passphrase 的话</span></span>
+<span id="cb10-6"><a href="#cb10-6" aria-hidden="true" tabindex="-1"></a><span class="bu">eval</span> <span class="st">&quot;</span><span class="va">$(</span><span class="fu">ssh-agent</span> -s<span class="va">)</span><span class="st">&quot;</span> <span class="co"># 后台启动 ssh-agent</span></span>
+<span id="cb10-7"><a href="#cb10-7" aria-hidden="true" tabindex="-1"></a><span class="fu">ssh-add</span> ~/.ssh/id-rsa</span>
+<span id="cb10-8"><a href="#cb10-8" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> pacman -S xclip</span>
+<span id="cb10-9"><a href="#cb10-9" aria-hidden="true" tabindex="-1"></a><span class="ex">xclip</span> -sel clip <span class="op">&lt;</span> ~/.ssh/id_rsa.pub # 此行指令将公钥复制到剪切板，粘贴到 Github 上添加即可</span></code></pre></div>
+<h3 id="其他软件安装">其他软件安装</h3>
+<h4 id="安装-chrome-及-node.js">安装 Chrome 及 node.js</h4>
+<div class="sourceCode" id="cb11"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> pacman -S google-chrome nodejs npm</span></code></pre></div>
+<h4 id="安装截图软件-deepin-screenshot">安装截图软件 <code>deepin-screenshot</code></h4>
+<div class="sourceCode" id="cb12"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> pacman -S deepin-screenshot</span></code></pre></div>
+<h4 id="安装-vscode">安装 VSCode</h4>
+<div class="sourceCode" id="cb13"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> pacman -S visual-studio-code-bin</span></code></pre></div>
+<h4 id="安装-qqtim-和-wechat">安装 QQ，TIM 和 WeChat</h4>
+<div class="sourceCode" id="cb14"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> pacman -S deepin.com.qq.office</span>
+<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> pacman -S deepin.com.qq.im</span>
+<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> pacman -S electronic-wechat-git</span></code></pre></div>
+<h4 id="安装-福昕阅读器网易云smplayergoldendict">安装 福昕阅读器，网易云，smplayer，goldendict</h4>
+<div class="sourceCode" id="cb15"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="ex">yay</span> -S foxitreader netease-cloud-music smplayer goldendict </span></code></pre></div>
+<p>注意 <code>yay</code> 不要加 <code>sudo</code></p>
+<p>goldendict 需要手动添加词典，<a target="_blank" rel="noopener" href="https://github.com/skywind3000/ECDICT/wiki">下载地址</a></p>
+<h5 id="选装typora一款轻便好用的-markdown-编辑器支持所见即所得我用这个写的博客">（选装）Typora：一款轻便好用的 markdown 编辑器，支持所见即所得（我用这个写的博客）</h5>
+<div class="sourceCode" id="cb16"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="ex">yay</span> -s typora</span></code></pre></div>
+<h4 id="安装字体">安装字体</h4>
+<div class="sourceCode" id="cb17"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="co"># 文泉驿</span></span>
+<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a><span class="ex">yay</span> -S wqy-microhei-lite</span>
+<span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a><span class="ex">yay</span> -S wqy-bitmapfont </span>
+<span id="cb17-4"><a href="#cb17-4" aria-hidden="true" tabindex="-1"></a><span class="ex">yay</span> -S wqy-zenhei</span>
+<span id="cb17-5"><a href="#cb17-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Adobe 系列</span></span>
+<span id="cb17-6"><a href="#cb17-6" aria-hidden="true" tabindex="-1"></a><span class="ex">yay</span> -S adobe-source-han-sans-cn-fonts </span>
+<span id="cb17-7"><a href="#cb17-7" aria-hidden="true" tabindex="-1"></a><span class="ex">yay</span> -S adobe-source-han-serif-cn-fonts </span>
+<span id="cb17-8"><a href="#cb17-8" aria-hidden="true" tabindex="-1"></a><span class="ex">yay</span> -S noto-fonts-cjk</span></code></pre></div>
+<h4 id="安装-ss-ssr">安装 SS / SSR</h4>
+<h5 id="ss-安装">SS 安装</h5>
+<div class="sourceCode" id="cb18"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> pacman -S shadowsocks-qt5</span></code></pre></div>
+<h5 id="ssr-安装">SSR 安装</h5>
+<div class="sourceCode" id="cb19"><pre class="sourceCode html"><code class="sourceCode html"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a># GFW 导致直接 yay -S electron-ssr 会失效</span>
+<span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a># 请直接到此处下载 pacman 包</span>
+<span id="cb19-3"><a href="#cb19-3" aria-hidden="true" tabindex="-1"></a>https://github.com/qingshuisiyuan/electron-ssr-backup/releases</span>
+<span id="cb19-4"><a href="#cb19-4" aria-hidden="true" tabindex="-1"></a># 如果 SSR 安装异常请先安装 gconf</span></code></pre></div>
+<h5 id="tweaks-安装">Tweaks 安装</h5>
+<p>Gnome Tweaks 是 Gnome 下的一款主题管理软件</p>
+<div class="sourceCode" id="cb20"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> pacman -S gnome-tweak-tool</span></code></pre></div>
+<h3 id="其他配置">其他配置</h3>
+<h4 id="配置快捷键">配置快捷键</h4>
+<p>设置-设备-键盘-下划到最下方点击 <code>+</code> 号新建快捷键，自行设定即可，命令为要打开的软件名</p>
+<h4 id="文件夹默认打开方式出错解决方法例如默认文件夹打开方式变为vscode">文件夹默认打开方式出错解决方法（例如默认文件夹打开方式变为VSCode）</h4>
+<p>设置-应用-移除相应误开软件的文件打开方式绑定</p>
+<h4 id="配置主题后报错-gtk-warning-...-theme-parsing-error">配置主题后报错 <code>Gtk-WARNING **: ... :Theme parsing error</code></h4>
+<p>在终端中输入</p>
+<div class="sourceCode" id="cb21"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> /usr/share/themes/</span>
+<span id="cb21-2"><a href="#cb21-2" aria-hidden="true" tabindex="-1"></a><span class="fu">ls</span></span></code></pre></div>
+<p>找到你当前主题对应的文件夹（不清楚主题名称可在 Tweaks 中查看）</p>
+<p>然后进入其下的 <code>gtk-&lt;version&gt;</code> 文件夹，<code>&lt;version&gt;</code> 对应你当前的GTK版本，大概率是其中的最新版。</p>
+<p>然后根据报错信息手动修改文件夹中的 <code>gtk.css</code> 即可。</p>
+
+        </div>
+
+        <blockquote class="post-copyright">
+    
+    <div class="content">
+        
+<span class="post-time">
+    最后更新时间：<time datetime="2019-07-24T11:24:53.000Z" itemprop="dateUpdated">7月 24, 2019 19:24</time>
+</span><br>
+
+
+        
+    </div>
+    
+    <footer>
+        <a href="https://ayllenzhang.github.io">
+            <img src="/img/mokuroo.png" alt="Ayllen Zhang">
+            Ayllen Zhang
+        </a>
+    </footer>
+</blockquote>
+
+        
+
+
+        <div class="post-footer">
+            
+	<ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/installation/" rel="tag">installation</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/linux/" rel="tag">linux</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/manjaro/" rel="tag">manjaro</a></li></ul>
+
+
+            
+<div class="page-share-wrap">
+    
+
+<div class="page-share" id="pageShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://ayllenzhang.github.io/2019/06/manjaro-install/&title=《Manjaro 装机二三事》 — Ayllen's Neverland&pic=https://ayllenzhang.github.io/img/mokuroo.png" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://ayllenzhang.github.io/2019/06/manjaro-install/&title=《Manjaro 装机二三事》 — Ayllen's Neverland&source=作为当前 DistroWatch 上排名第二的 Linux 发行版，基于 ArchLinux 的 Manjaro 在共享前者的 AUR 仓库，Wiki 及..." data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://ayllenzhang.github.io/2019/06/manjaro-install/" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《Manjaro 装机二三事》 — Ayllen's Neverland&url=https://ayllenzhang.github.io/2019/06/manjaro-install/&via=https://ayllenzhang.github.io" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://ayllenzhang.github.io/2019/06/manjaro-install/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+
+    <a href="javascript:;" id="shareFab" class="page-share-fab waves-effect waves-circle">
+        <i class="icon icon-share-alt icon-lg"></i>
+    </a>
+</div>
+
+
+
+        </div>
+    </div>
+
+    
+<nav class="post-nav flex-row flex-justify-between">
+  
+    <div class="waves-block waves-effect prev">
+      <a href="/2019/07/save-manjaro/" id="post-prev" class="post-nav-link">
+        <div class="tips"><i class="icon icon-angle-left icon-lg icon-pr"></i> Prev</div>
+        <h4 class="title">拯救 manjaro</h4>
+      </a>
+    </div>
+  
+
+  
+    <div class="waves-block waves-effect next">
+      <a href="/2019/06/train-memory/" id="post-next" class="post-nav-link">
+        <div class="tips">Next <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
+        <h4 class="title">儿时的火车记忆</h4>
+      </a>
+    </div>
+  
+</nav>
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+    <!-- Valine Comments -->
+    <div class="comments vcomment v" id="vcomments"></div>
+    <!-- <div class="comment" id="comment"></div> -->
+    <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/valine/dist/Valine.min.js"></script>
+    <!-- <script src="//t1.aixinxi.net/o_1c3n4pim01nl3jg91b6l1kjtkvsa.js"></script> -->
+    <!-- <script src="/js/Valine.min.js"></script> -->
+    <!-- <script src="https://cdnjs.cat.net/ajax/libs/jquery/3.2.1/jquery.min.js"></script> -->
+    <script src="//cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script>
+    <!-- Valine Comments script -->
+    <script>
+        var GUEST_INFO = ['nick','mail','link'];
+        var guest_info = 'nick,mail'.split(',').filter(function(item){
+          return GUEST_INFO.indexOf(item) > -1
+        });
+        new Valine({
+            av: AV,
+            // el: '#comments',
+            el: '#vcomments',
+            emoticon_url: 'https://abelsu7.top/alu', //表情图片网址
+            emoticon_list: ["赞一个.png","坐等.png","长草.png","阴暗.png","邪恶.png","小眼睛.png","想一想.png","献黄瓜.png","献花.png","喜极而泣.png","无语.png","无所谓.png","无奈.png","投降.png","深思.png","期待.png","狂汗.png","蜡烛.png","看不见.png","惊喜.png","击掌.png","欢呼.png","得意.png","不出所料.png","观察.png"],//表情图片文件名
+            // notify: 'false' == 'false',
+            // verify: 'false' == 'false',
+            // notify: 'false',
+            // verify: 'false',
+            notify: false,
+            verify: false,
+            appId: "cFer952Ja6DQ1O1yE5bT2hDU-gzGzoHsz",
+            appKey: "MzfFmkudIEwjkIT0SfkW0fCm",
+            avatar: "mp",
+            placeholder: "Comments are welcome",
+            guest_info: guest_info.length == 0 ? GUEST_INFO : guest_info,
+            pageSize: "10"
+        })
+    </script>
+    <!-- Valine Comments end -->
+
+
+
+
+
+
+
+
+
+    <section class="comments" id="comments">
+        <div id="gitalk-container"></div>
+        <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+        <script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+        <script>
+            var id = location.pathname
+            if (location.pathname.length > 50) {
+              id = location.pathname.replace(/\/\d+\/\d+\/\d+\//, '').replace('/', '').substring(0, 50)
+            }
+            const gitalk = new Gitalk({
+              clientID: '',
+              clientSecret: '',
+              repo: 'yiyayamaya.github.io',
+              owner: 'yiyayamaya',
+              admin: ['yiyayamaya'],
+              id: id,      // Ensure uniqueness and length less than 50
+              title: document.title.split('|')[0],
+              distractionFreeMode: false  // Facebook-like distraction free mode
+            })
+            gitalk.render('gitalk-container')
+        </script>
+    </section>
+
+
+
+</article>
+
+
+
+</div>
+
+        <footer class="footer">
+    <div class="top">
+        
+
+            <p>
+                
+                    <span>
+                        <a href="/atom.xml" target="_blank" class="rss" title="rss">
+                            <i class="icon icon-lg icon-rss"></i>
+                        </a>
+                    </span>
+                    
+                        <span>
+                            博客内容遵循 <a rel="license noopener" target="_blank" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">知识共享 署名 - 非商业性 - 相同方式共享 4.0 国际协议</a>
+                        </span>
+            </p>
+    </div>
+    <div class="bottom">
+        <p>
+            <span>
+                Ayllen Zhang &copy;
+                    
+                        2018 -
+                            
+                                2021
+            </span>
+            <span>
+                
+                    <a href="http://beian.miit.gov.cn/" target="_blank">
+                        京ICP备18044497号-1
+                    </a>
+                    <br>
+                    
+                        Power by
+                        <a href="http://hexo.io/" target="_blank">Hexo</a> Theme
+                        <a href="https://github.com/abelsu7/hexo-theme-indigo-plus" target="_blank">indigo plus</a>
+                        <p>Hosted by <a href="https://pages.github.com" target="_blank" style="font-weight: bold">Github Pages</a></p>
+            </span>
+        </p>
+    </div>
+</footer>
+
+    </main>
+    <div class="mask" id="mask"></div>
+<a href="javascript:;" id="gotop" class="waves-effect waves-circle waves-light"><span class="icon icon-lg icon-chevron-up"></span></a>
+<a href="javascript:;" id="gobottom" class="waves-effect waves-circle waves-light"><span class="icon icon-lg icon-comments"></span></a>
+
+
+
+<div class="global-share" id="globalShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://ayllenzhang.github.io/2019/06/manjaro-install/&title=《Manjaro 装机二三事》 — Ayllen's Neverland&pic=https://ayllenzhang.github.io/img/mokuroo.png" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://ayllenzhang.github.io/2019/06/manjaro-install/&title=《Manjaro 装机二三事》 — Ayllen's Neverland&source=作为当前 DistroWatch 上排名第二的 Linux 发行版，基于 ArchLinux 的 Manjaro 在共享前者的 AUR 仓库，Wiki 及..." data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://ayllenzhang.github.io/2019/06/manjaro-install/" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《Manjaro 装机二三事》 — Ayllen's Neverland&url=https://ayllenzhang.github.io/2019/06/manjaro-install/&via=https://ayllenzhang.github.io" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://ayllenzhang.github.io/2019/06/manjaro-install/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+<div class="page-modal wx-share" id="wxShare">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMYAAADGCAAAAACs8KCBAAACJElEQVR42u3aQW7DMAwEQP//0+61QFB7SToFLI1OheNGnBwISuRxxOv8tf568vn889Pedz62MDAwXss4L1eyQR7u53cm71zHhoGBsQ/jOrhk++sn1WyZx4aBgYHx1zu90PPkjoGBgTFPuJMg5skaAwNjT0YeXC/c6oH2i2dxDAyMFzLyW/f///sr/Q0MDIxXMc7iuk6+STvzOnE3o8LAwFia0bu4/147YRIPBgbG2owk/U3KxOqT5M1CJYuBgbEEI09w1VGJ/J1JcwIDA2MfxqQNmR9HJ+3Mmx8XAwNjUcZkhKJ5KRaXgIXEjYGBsQ3jqSu2/NN8LCyaFsHAwFiaMSkK87TYC7FQGmJgYCzNuD5w5ttPmpej6zYMDIylGXlzsbdl75DcvLzDwMBYlJG8mpd31Qv9/H9vmqwYGBhLM/KNnxoUS5oEedvgphOLgYGxEKOXBJPW5hGvvAmBgYGxG2N+7VW9GsupD8yMYGBgLMHIZxV6x9feMMcDRSEGBsY2jB5m0jAYpX4MDIwNGNWSbpKUeyXgTSrHwMDYmNFrD+Q/ylFczYSLgYHxWsZZXPNxjWorIvpZMTAwlmbMW4yTJ70GQ29ABAMD4+2M/JhaLQqfStlRgxMDA2MDRi/xVdsA1QGO8rAFBgYGRpDfkrJyUoxG93AYGBjbM6rH1N6lW/UIjYGBsQPj2XGK3shF0gTFwMDYk1Edcci37w1bVDEYGBhLM34Aobz6CKc0/zMAAAAASUVORK5CYII=" alt="微信分享二维码">
+</div>
+
+
+
+
+    <script src="//cdn.jsdelivr.net/npm/node-waves@0.7.6/src/js/waves.min.js"></script>
+<script>
+var BLOG = { ROOT: '/', SHARE: true, REWARD: false };
+
+
+</script>
+
+<script src="/js/main.min.js?v=1.7.2"></script>
+
+
+<div class="search-panel" id="search-panel">
+    <ul class="search-result" id="search-result"></ul>
+</div>
+<template id="search-tpl">
+<li class="item">
+    <a href="{path}" class="waves-block waves-effect">
+        <div class="title ellipsis" title="{title}">{title}</div>
+        <div class="flex-row flex-middle">
+            <div class="tags ellipsis">
+                {tags}
+            </div>
+            <time class="flex-col time">{date}</time>
+        </div>
+    </a>
+</li>
+</template>
+
+<script src="/js/search.min.js?v=1.7.2" async></script>
+
+
+
+<!-- mathjax config similar to math.stackexchange -->
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+        processEscapes: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    }
+});
+
+MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';
+    }
+});
+</script>
+
+<script async src="//cdn.jsdelivr.net/npm/mathjax@2.7.5/MathJax.js?config=TeX-MML-AM_CHTML" async></script>
+<!-- <script async src="//cdn.bootcss.com/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML" async></script> -->
+<!-- <script async src="//cdn.bootcss.com/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML" async></script> -->
+
+
+
+
+
+
+<script>
+(function() {
+    var OriginTitile = document.title, titleTime;
+    document.addEventListener('visibilitychange', function() {
+        if (document.hidden) {
+            document.title = '...Standby';
+            clearTimeout(titleTime);
+        } else {
+            document.title = 'Neverland';
+            titleTime = setTimeout(function() {
+                document.title = OriginTitile;
+            },2000);
+        }
+    });
+})();
+</script>
+
+
+<script src="/js/prism.min.js?v=1.7.2"></script>
+<script src="/js/prism-vim.min.js?v=1.7.2"></script>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+</body>
+</html>
